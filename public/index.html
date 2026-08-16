@@ -81,8 +81,8 @@
 
         <!-- Live Search Box -->
         <div class="search-box">
-          <input type="text" class="search-input" id="globalSearchInput" placeholder="Search Group 4 Code 496, Group 1, Unit 8, Polity notes, Syllabus, PYQs...">
-          <button class="search-btn" id="globalSearchBtn">
+          <input type="text" class="search-input" id="groupSearchInput" placeholder="Search Group 4 Code 496, Group 1, Unit 8, Polity notes, Syllabus, PYQs...">
+          <button class="search-btn">
             <i class="fa-solid fa-magnifying-glass"></i> Search
           </button>
         </div>
@@ -135,6 +135,78 @@
 
       <div class="cards-grid" id="groupsCardsGrid">
         <!-- Dynamically rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Beginner Eligibility Checker Widget -->
+  <section class="container" style="margin-bottom: 3rem;">
+    <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
+      <div class="section-title-wrap" style="text-align: left; margin-bottom: 1.5rem;">
+        <h2 class="section-title" style="font-size: 1.6rem;"><i class="fa-solid fa-user-check" style="color:var(--brand-primary);"></i> Beginner Eligibility & Group Matcher</h2>
+        <p class="section-desc" style="font-size: 0.95rem;">Not sure which exam group you can write? Select your educational qualification below to find your eligible exam cadres instantly.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; align-items: end;">
+        <div>
+          <label style="font-weight: 600; display: block; margin-bottom: 0.5rem; font-size: 0.9rem;">Education Qualification:</label>
+          <select id="eligibilityQualSelect" style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-primary); color: var(--text-primary);">
+            <option value="sslc">SSLC / 10th Standard (10th Pass)</option>
+            <option value="hsc">HSC / Higher Secondary (12th Pass / Diploma)</option>
+            <option value="degree" selected>Any Degree (B.A., B.Sc., B.Com, B.E., B.Tech)</option>
+            <option value="law">Degree in Law (B.L. / LL.B.)</option>
+            <option value="agama">Diploma in Saiva / Vaishnava Agama</option>
+          </select>
+        </div>
+
+        <div>
+          <label style="font-weight: 600; display: block; margin-bottom: 0.5rem; font-size: 0.9rem;">Your Age:</label>
+          <input type="number" id="eligibilityAgeInput" value="21" min="18" max="58" style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-primary); color: var(--text-primary);">
+        </div>
+
+        <div>
+          <button class="btn btn-primary" id="checkEligibilityBtn" style="width: 100%; height: 48px;">
+            <i class="fa-solid fa-bullseye"></i> Check Eligible Groups
+          </button>
+        </div>
+      </div>
+
+      <div id="eligibilityResultBox"></div>
+    </div>
+  </section>
+
+  <!-- Interactive Practice Quiz Widget -->
+  <section class="container" style="margin-bottom: 3rem;">
+    <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
+      <div class="section-title-wrap" style="text-align: left; margin-bottom: 1.5rem;">
+        <h2 class="section-title" style="font-size: 1.6rem;"><i class="fa-solid fa-laptop-code" style="color:var(--brand-gold);"></i> Daily Practice Mini-Quiz</h2>
+        <p class="section-desc" style="font-size: 0.95rem;">Test your knowledge on key TNPSC questions from General Tamil and Unit 8 (Tamil History & Culture).</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+        <!-- Question 1 -->
+        <div class="quiz-card" style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.25rem;">
+          <span style="font-size:0.75rem; font-weight:700; color:var(--brand-primary); text-transform:uppercase;">Unit 8: Tamil Literature</span>
+          <h4 style="margin: 0.5rem 0 1rem 0; font-size:1.05rem;">1. 'திருக்குறள்' முதன் முதலில் அச்சிடப்பட்ட ஆண்டு எது?</h4>
+          <div style="display:flex; flex-direction:column; gap:0.5rem;">
+            <button class="quiz-option-btn btn btn-outline" style="text-align:left; justify-content:flex-start;" onclick="window.submitQuizAnswer(this, false, '1812-ஆம் ஆண்டு தஞ்சையில் மலையப்ப பிள்ளை என்பவரால் முதன்முதலில் திருக்குறள் அச்சிடப்பட்டது.')">A. 1804</button>
+            <button class="quiz-option-btn btn btn-outline" style="text-align:left; justify-content:flex-start;" onclick="window.submitQuizAnswer(this, true, '1812-ஆம் ஆண்டு தஞ்சையில் மலையப்ப பிள்ளையால் திருக்குறள் முதன்முதலில் அச்சிடப்பட்டது.')">B. 1812 (சரியான விடை)</button>
+            <button class="quiz-option-btn btn btn-outline" style="text-align:left; justify-content:flex-start;" onclick="window.submitQuizAnswer(this, false, '1812-ஆம் ஆண்டு தஞ்சையில் மலையப்ப பிள்ளை என்பவரால் முதன்முதலில் திருக்குறள் அச்சிடப்பட்டது.')">C. 1825</button>
+          </div>
+          <div class="quiz-feedback" style="margin-top:0.75rem; font-size:0.88rem;"></div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="quiz-card" style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.25rem;">
+          <span style="font-size:0.75rem; font-weight:700; color:var(--brand-gold); text-transform:uppercase;">Indian Polity & Constitution</span>
+          <h4 style="margin: 0.5rem 0 1rem 0; font-size:1.05rem;">2. Which Article of the Indian Constitution outlines the State Public Service Commissions (like TNPSC)?</h4>
+          <div style="display:flex; flex-direction:column; gap:0.5rem;">
+            <button class="quiz-option-btn btn btn-outline" style="text-align:left; justify-content:flex-start;" onclick="window.submitQuizAnswer(this, false, 'Article 315 to 323 of Part XIV deals with Public Service Commissions.')">A. Article 280</button>
+            <button class="quiz-option-btn btn btn-outline" style="text-align:left; justify-content:flex-start;" onclick="window.submitQuizAnswer(this, true, 'Articles 315 to 323 under Part XIV deal with Union and State Public Service Commissions.')">B. Article 315 (Correct Answer)</button>
+            <button class="quiz-option-btn btn btn-outline" style="text-align:left; justify-content:flex-start;" onclick="window.submitQuizAnswer(this, false, 'Article 315 to 323 of Part XIV deals with Public Service Commissions.')">C. Article 356</button>
+          </div>
+          <div class="quiz-feedback" style="margin-top:0.75rem; font-size:0.88rem;"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -199,19 +271,19 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <div class="brand-logo" style="margin-bottom:1rem;">
+          <div class="brand-logo" style="margin-bottom:0.75rem;">
             <div class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-            <div class="brand-text" style="color:#ffffff;">TNPSC <span style="color:var(--brand-accent);">PATH</span></div>
+            <div class="brand-text">TNPSC <span>PATH</span></div>
           </div>
-          <p style="font-size:0.88rem; line-height:1.6;">
-            A clean, beginner-focused educational platform providing comprehensive guidance, official syllabus explorer, past papers, and shared notes for all 8 TNPSC Groups.
+          <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.6;">
+            A beginner-focused guidance ecosystem for all 8 TNPSC Civil Service Exam Groups. Built with official gazette standards, unit-wise syllabus mappings, and open study resources.
           </p>
         </div>
 
         <div class="footer-col">
-          <h4>All 8 Exam Groups</h4>
+          <h4>TNPSC Exam Groups</h4>
           <ul class="footer-links">
-            <li><a href="/group1">Group 1 Premier</a></li>
+            <li><a href="/group1">Group 1 (Premier)</a></li>
             <li><a href="/group2">Group 2 & 2A</a></li>
             <li><a href="/group3">Group 3 Subordinate</a></li>
             <li><a href="/group4">Group 4 & VAO (Code: 496)</a></li>
@@ -223,31 +295,35 @@
         </div>
 
         <div class="footer-col">
-          <h4>Resources</h4>
+          <h4>Preparation Hub</h4>
           <ul class="footer-links">
             <li><a href="/syllabus">Syllabus Explorer</a></li>
-            <li><a href="/previous-papers">Previous Question Papers</a></li>
-            <li><a href="/resources">Community Library</a></li>
-            <li><a href="/study-plan">Study Roadmaps</a></li>
+            <li><a href="/previous-papers">Previous Papers & PPTs</a></li>
+            <li><a href="/resources">Shared Notes Library</a></li>
+            <li><a href="/study-plan">Study Timetables</a></li>
+            <li><a href="/guidance">Strategy & Guidance</a></li>
+            <li><a href="/faq">Frequently Asked Questions</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Official Portals</h4>
-          <ul class="footer-links">
-            <li><a href="https://www.tnpsc.gov.in" target="_blank" rel="noopener">Official TNPSC Website <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></a></li>
-            <li><a href="https://tnpscexams.in" target="_blank" rel="noopener">TNPSC Online Applications <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></a></li>
-          </ul>
+          <h4>Official Verification Advisory</h4>
+          <p style="color:var(--text-muted); font-size:0.85rem; line-height:1.5;">
+            Candidates must cross-verify exam timetables, eligibility conditions, and application links at the official TNPSC Commission web portal:
+          </p>
+          <a href="https://www.tnpsc.gov.in" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:0.75rem; font-size:0.82rem;">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Official tnpsc.gov.in
+          </a>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <p>&copy; 2026 TNPSC Path. Educational Guidance. Aspirants must verify official updates at <strong>tnpsc.gov.in</strong>.</p>
+      <div style="border-top:1px solid var(--border-color); margin-top:2rem; padding-top:1.5rem; text-align:center; font-size:0.85rem; color:var(--text-muted);">
+        &copy; 2026 TNPSC Path Platform. Educational Guidance & Preparation System. All Rights Reserved.
       </div>
     </div>
   </footer>
 
-  <!-- App Client Logic JS -->
+  <!-- Main JavaScript File -->
   <script src="js/app.js"></script>
 </body>
 </html>

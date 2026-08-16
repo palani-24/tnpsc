@@ -61,62 +61,45 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // 4. Download Resource Helper
-  window.downloadResource = function (id, fileName) {
-    alert(`Downloading file: ${fileName || 'Sample_Study_Material.pdf'}\nResource ID: ${id}`);
-  };
-
-  // 5. Global Search Functionality
-  const searchInput = document.getElementById('globalSearchInput');
-  const searchBtn = document.getElementById('globalSearchBtn');
-
-  if (searchBtn && searchInput) {
-    searchBtn.addEventListener('click', performSearch);
-    searchInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') performSearch();
+  // 4. Live Search Filter for Homepage Exam Group Cards
+  const groupSearchInput = document.getElementById('groupSearchInput');
+  if (groupSearchInput) {
+    groupSearchInput.addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.group-card');
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(q)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
     });
   }
 
-  function performSearch() {
-    const query = searchInput.value.trim().toLowerCase();
-    if (!query) {
-      alert('Please enter a search keyword (e.g. Group 4, Unit 8, Polity, Syllabus)');
-      return;
-    }
-    if (query.includes('group 4') || query.includes('vao') || query.includes('496')) {
-      window.location.href = '/group4';
-    } else if (query.includes('group 1')) {
-      window.location.href = '/group1';
-    } else if (query.includes('group 2')) {
-      window.location.href = '/group2';
-    } else if (query.includes('group 3')) {
-      window.location.href = '/group3';
-    } else if (query.includes('syllabus')) {
-      window.location.href = '/syllabus';
-    } else if (query.includes('previous') || query.includes('pyq') || query.includes('paper')) {
-      window.location.href = '/previous-papers';
-    } else {
-      window.location.href = `/resources?search=${encodeURIComponent(query)}`;
-    }
-  }
+  // 5. Global Download Handler
+  window.downloadResource = function (id, fileName) {
+    fetch(`/api/resources/${id}/download`, { method: 'POST' })
+      .then(res => res.json())
+      .then(data => {
+        alert(`Downloading "${fileName}"...\nTotal Downloads: ${data.downloads}`);
+      })
+      .catch(err => console.error(err));
+  };
 
-  // 6. Homepage Groups Grid Renderer for ALL 8 GROUPS
+  // 6. Dynamic Groups Loader (Fallback to pre-rendered HTML cards if API takes time)
   const groupsCardsGrid = document.getElementById('groupsCardsGrid');
-  if (groupsCardsGrid) {
+  if (groupsCardsGrid && groupsCardsGrid.children.length === 0) {
     fetch('/api/groups')
       .then(res => res.json())
       .then(groups => {
         if (!groups || groups.length === 0) return;
         groupsCardsGrid.innerHTML = '';
-        
         groups.forEach(g => {
           const card = document.createElement('div');
           card.className = 'group-card';
-
-          const badgeColor = g.id === 'group1' ? 'premier' :
-                           g.id === 'group2' ? 'demand' :
-                           g.id === 'group4' ? 'premier' : 'info';
-
+          const badgeColor = g.badge === 'High Level' ? 'badge-primary' : (g.badge === 'Popular' ? 'badge-gold' : 'badge-outline');
           card.innerHTML = `
             <div class="group-card-header">
               <div>
@@ -176,4 +159,54 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch(err => console.error('Error loading resources preview:', err));
   }
+
+  // 8. Eligibility Checker Tool
+  const checkEligibilityBtn = document.getElementById('checkEligibilityBtn');
+  if (checkEligibilityBtn) {
+    checkEligibilityBtn.addEventListener('click', () => {
+      const qual = document.getElementById('eligibilityQualSelect').value;
+      const age = parseInt(document.getElementById('eligibilityAgeInput').value) || 21;
+      const resultBox = document.getElementById('eligibilityResultBox');
+      
+      let eligibleGroups = [];
+
+      if (qual === 'sslc') {
+        eligibleGroups = ['Group 4 (VAO & Junior Assistant)', 'Group 7B & 8 (Executive Officer Grade IV)'];
+      } else if (qual === 'hsc' || qual === 'diploma') {
+        eligibleGroups = ['Group 3 (Junior Inspector)', 'Group 4 (VAO)', 'Group 5A (Secretariat Assistant)', 'Group 7B & 8'];
+      } else if (qual === 'degree') {
+        eligibleGroups = ['Group 1 (Deputy Collector / DSP)', 'Group 2 & 2A (Sub-Registrar / Senior Inspector)', 'Group 3', 'Group 4', 'Group 5A', 'Group 6 (Forest Apprentice)', 'Group 7B & 8'];
+      } else if (qual === 'law' || qual === 'agama') {
+        eligibleGroups = ['Group 1', 'Group 2 & 2A', 'Group 7A (Executive Officer Grade I)', 'Group 7B & 8', 'Group 3', 'Group 4'];
+      }
+
+      resultBox.innerHTML = `
+        <div style="background:var(--bg-primary); border:2px solid var(--brand-primary); padding:1.25rem; border-radius:12px; margin-top:1rem;">
+          <h4 style="color:var(--brand-primary); margin-bottom:0.5rem;"><i class="fa-solid fa-circle-check"></i> Eligible Exam Groups for You:</h4>
+          <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:0.75rem;">Based on <strong>${qual.toUpperCase()}</strong> qualification and <strong>Age ${age}</strong>:</p>
+          <ul style="padding-left:1.25rem; font-weight:600;">
+            ${eligibleGroups.map(g => `<li style="margin-bottom:0.35rem;">🎯 ${g}</li>`).join('')}
+          </ul>
+        </div>
+      `;
+    });
+  }
+
+  // 9. Interactive Quiz Widget
+  window.submitQuizAnswer = function (btn, isCorrect, explanation) {
+    const parent = btn.closest('.quiz-card');
+    const options = parent.querySelectorAll('.quiz-option-btn');
+    options.forEach(o => o.disabled = true);
+
+    const feedback = parent.querySelector('.quiz-feedback');
+    if (isCorrect) {
+      btn.style.background = '#10b981';
+      btn.style.color = '#ffffff';
+      feedback.innerHTML = `<span style="color:#10b981; font-weight:700;">✅ Correct!</span> ${explanation}`;
+    } else {
+      btn.style.background = '#ef4444';
+      btn.style.color = '#ffffff';
+      feedback.innerHTML = `<span style="color:#ef4444; font-weight:700;">❌ Incorrect.</span> ${explanation}`;
+    }
+  };
 });
