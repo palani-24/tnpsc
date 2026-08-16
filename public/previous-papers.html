@@ -140,8 +140,24 @@
 
   <script src="js/app.js"></script>
   <script>
-    window.downloadPPT = function(fileName) {
-      alert(`Downloading PPT Concept Presentation: ${fileName}\n\nIncludes:\n• High-Yield Question Solutions\n• Unit 8 & Unit 9 Mind Maps\n• General Tamil Key Formulas`);
+    window.downloadPPT = function(filePath) {
+      const target = filePath || '/uploads/TNPSC_All_Groups_Core_Concepts.pptx';
+      const link = document.createElement('a');
+      link.href = target;
+      link.download = target.split('/').pop();
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    };
+
+    window.downloadPDF = function(filePath) {
+      const target = filePath || '/uploads/TNPSC_Group4_2024_Official_Paper.pdf';
+      const link = document.createElement('a');
+      link.href = target;
+      link.download = target.split('/').pop();
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     };
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -156,6 +172,9 @@
           return;
         }
         pyqs.forEach(p => {
+          const pdfUrl = p.filePath || ('/uploads/' + (p.fileName || 'TNPSC_Group4_2024_Official_Paper.pdf'));
+          const pptUrl = p.pptPath || '/uploads/TNPSC_All_Groups_Core_Concepts.pptx';
+
           const tr = document.createElement('tr');
           tr.innerHTML = `
             <td><strong>${p.title}</strong></td>
@@ -165,11 +184,11 @@
             <td>${p.subject}</td>
             <td><span style="color:var(--brand-accent); font-weight:600;"><i class="fa-solid fa-file-pdf"></i> PDF + <i class="fa-solid fa-file-powerpoint" style="color:#d97706;"></i> PPT</span></td>
             <td>
-              <div style="display:flex; gap:0.5rem;">
-                <button class="btn btn-outline" style="padding:0.3rem 0.65rem; font-size:0.8rem;" onclick="alert('Downloading ${p.title} Official Paper')">
-                  <i class="fa-solid fa-file-pdf"></i> PDF
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                <button class="btn btn-outline" style="padding:0.3rem 0.65rem; font-size:0.8rem;" onclick="window.downloadPDF('${pdfUrl}')">
+                  <i class="fa-solid fa-file-pdf"></i> Download PDF
                 </button>
-                <button class="btn btn-primary" style="padding:0.3rem 0.65rem; font-size:0.8rem; background:var(--brand-gold);" onclick="window.downloadPPT('${p.title}_Concept_Slides.pptx')">
+                <button class="btn btn-primary" style="padding:0.3rem 0.65rem; font-size:0.8rem; background:var(--brand-gold);" onclick="window.downloadPPT('${pptUrl}')">
                   <i class="fa-solid fa-file-powerpoint"></i> Concept PPT
                 </button>
               </div>

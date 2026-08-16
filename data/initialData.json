@@ -235,8 +235,10 @@
       "year": "2024",
       "stage": "Single Written",
       "subject": "General Studies (75) + Aptitude (25) + General Tamil (100)",
-      "fileSize": "4.2 MB",
-      "fileName": "TNPSC_Group4_2024_Official_Paper.pdf"
+      "fileSize": "3.1 MB",
+      "fileName": "TNPSC_Group4_2024_Official_Paper.pdf",
+      "filePath": "/uploads/TNPSC_Group4_2024_Official_Paper.pdf",
+      "pptPath": "/uploads/TNPSC_Group4_Code496_Concept_Slides.pptx"
     },
     {
       "id": "pyq-g1-2023",
@@ -245,8 +247,10 @@
       "year": "2023",
       "stage": "Prelims",
       "subject": "General Studies (175) + Aptitude (25)",
-      "fileSize": "3.8 MB",
-      "fileName": "TNPSC_Group1_2023_Prelims.pdf"
+      "fileSize": "2.2 MB",
+      "fileName": "TNPSC_Group1_2023_Prelims.pdf",
+      "filePath": "/uploads/TNPSC_Group1_2023_Prelims.pdf",
+      "pptPath": "/uploads/TNPSC_Group1_Concept_Slides.pptx"
     },
     {
       "id": "pyq-g2-2022",
@@ -255,8 +259,10 @@
       "year": "2022",
       "stage": "Prelims",
       "subject": "General Tamil (100) + General Studies (75) + Aptitude (25)",
-      "fileSize": "3.5 MB",
-      "fileName": "TNPSC_Group2_2022_Prelims.pdf"
+      "fileSize": "1.8 MB",
+      "fileName": "TNPSC_Group2_2022_Prelims.pdf",
+      "filePath": "/uploads/TNPSC_Group2_2022_Prelims.pdf",
+      "pptPath": "/uploads/TNPSC_Group2_Concept_Slides.pptx"
     },
     {
       "id": "pyq-g7b-2023",
@@ -265,8 +271,10 @@
       "year": "2023",
       "stage": "Written",
       "subject": "Paper I (GS & Tamil) + Paper II (சைவமும் வைணவமும்)",
-      "fileSize": "3.1 MB",
-      "fileName": "TNPSC_Group7B_2023_EO.pdf"
+      "fileSize": "1.8 MB",
+      "fileName": "TNPSC_Group7B_2023_EO.pdf",
+      "filePath": "/uploads/TNPSC_Group7B_2023_EO.pdf",
+      "pptPath": "/uploads/TNPSC_All_Groups_Core_Concepts.pptx"
     },
     {
       "id": "pyq-g4-2022",
@@ -275,8 +283,10 @@
       "year": "2022",
       "stage": "Single Written",
       "subject": "General Studies & General Tamil",
-      "fileSize": "4.0 MB",
-      "fileName": "TNPSC_Group4_2022_Paper.pdf"
+      "fileSize": "1.7 MB",
+      "fileName": "TNPSC_Group4_2022_Paper.pdf",
+      "filePath": "/uploads/TNPSC_Group4_2022_Paper.pdf",
+      "pptPath": "/uploads/TNPSC_Group4_Code496_Concept_Slides.pptx"
     }
   ],
 
@@ -290,7 +300,8 @@
       "subject": "General Tamil (100 Qs)",
       "description": "Comprehensive notes covering இலக்கணம், கலைச் சொற்கள், நிறுத்தற்குறிகள், and திருக்குறள் 20 அதிகாரங்கள்.",
       "downloads": 482,
-      "fileName": "Group4_General_Tamil_Complete_Notes.pdf"
+      "fileName": "Group4_General_Tamil_Complete_Notes.pdf",
+      "filePath": "/uploads/Group4_General_Tamil_Complete_Notes.pdf"
     },
     {
       "id": "res-g4-code496-syllabus",
@@ -301,7 +312,8 @@
       "subject": "Official Gazette Notification",
       "description": "Complete 4-page official revised syllabus document published on 12.12.2024.",
       "downloads": 890,
-      "fileName": "Group4_Official_Syllabus_Code_496.pdf"
+      "fileName": "TNPSC_Group4_2024_Official_Paper.pdf",
+      "filePath": "/uploads/TNPSC_Group4_2024_Official_Paper.pdf"
     },
     {
       "id": "res-unit8-notes",
@@ -312,7 +324,8 @@
       "subject": "Unit 8 TN History",
       "description": "Short summary notes for Sangam Literature, Freedom fighters of TN, and Thirukkural universal values.",
       "downloads": 350,
-      "fileName": "Unit8_TN_History_Thirukkural_Notes.pdf"
+      "fileName": "TNPSC_Unit8_Unit9_Master_Mindmap.pdf",
+      "filePath": "/uploads/TNPSC_Unit8_Unit9_Master_Mindmap.pdf"
     },
     {
       "id": "res-hrce-saivam",
@@ -323,7 +336,8 @@
       "subject": "Hindu Religion",
       "description": "Detailed notes on Saiva Siddhantam, Vaishnava Alwars, 12 Thirumurai, and Temple Law basics.",
       "downloads": 210,
-      "fileName": "HRCE_Saivam_Vaishnavam_Notes.pdf"
+      "fileName": "TNPSC_Group7B_2023_EO.pdf",
+      "filePath": "/uploads/TNPSC_Group7B_2023_EO.pdf"
     }
   ],
 

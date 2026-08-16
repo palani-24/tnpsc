@@ -1,4 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // 0. Landing Page Header Reveal Logic
+  const mainHeader = document.querySelector('.header');
+  const enterPortalBtn = document.getElementById('enterPortalBtn');
+
+  if (mainHeader && document.body.classList.contains('landing-page')) {
+    const handleScroll = () => {
+      if (window.scrollY > 80) {
+        mainHeader.classList.add('revealed');
+      } else {
+        mainHeader.classList.remove('revealed');
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+
+    if (enterPortalBtn) {
+      enterPortalBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        mainHeader.classList.add('revealed');
+        const groupsSec = document.getElementById('groupsSection');
+        if (groupsSec) {
+          groupsSec.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+  }
+
   // 1. Theme Toggle (Dark Mode / Light Mode)
   const themeToggleBtn = document.getElementById('themeToggleBtn');
   const themeIcon = document.getElementById('themeIcon');
@@ -35,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mobileMenuBtn && navLinks) {
     mobileMenuBtn.addEventListener('click', () => {
+      if (mainHeader) mainHeader.classList.add('revealed');
       navLinks.classList.toggle('active');
     });
   }
@@ -79,13 +107,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 5. Global Download Handler
-  window.downloadResource = function (id, fileName) {
+  window.downloadResource = function (id, fileName, filePath) {
     fetch(`/api/resources/${id}/download`, { method: 'POST' })
-      .then(res => res.json())
-      .then(data => {
-        alert(`Downloading "${fileName}"...\nTotal Downloads: ${data.downloads}`);
-      })
       .catch(err => console.error(err));
+
+    const target = filePath || `/uploads/${fileName || 'Group4_General_Tamil_Complete_Notes.pdf'}`;
+    const link = document.createElement('a');
+    link.href = target;
+    link.download = target.split('/').pop();
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   // 6. Dynamic Groups Loader (Fallback to pre-rendered HTML cards if API takes time)
@@ -149,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p class="resource-desc">${r.description || ''}</p>
             <div class="resource-footer">
               <div class="download-count"><i class="fa-solid fa-download"></i> ${r.downloads || 0} downloads</div>
-              <button class="btn btn-outline" style="padding:0.35rem 0.8rem; font-size:0.82rem;" onclick="window.downloadResource('${r.id}', '${r.fileName}')">
+              <button class="btn btn-outline" style="padding:0.35rem 0.8rem; font-size:0.82rem;" onclick="window.downloadResource('${r.id}', '${r.fileName}', '${r.filePath || ''}')">
                 <i class="fa-solid fa-file-arrow-down"></i> View / Download
               </button>
             </div>

@@ -6,21 +6,26 @@
   <title>TNPSC Path - Beginner's Complete Preparation Guide for All 8 Exam Groups</title>
   <meta name="description" content="Clean, beginner-friendly platform for all 8 TNPSC exam groups: Group 1, Group 2 & 2A, Group 3, Group 4 & VAO (Code: 496), Group 5A, Group 6, Group 7B & 8, Group 7A. Official syllabus, previous papers, roadmaps, and notes.">
   
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
   
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="landing-page">
 
   <!-- Official Notice Disclaimer Banner -->
   <div class="official-disclaimer-banner">
     <i class="fa-solid fa-circle-info"></i> <strong>Official Verification Note:</strong> Educational guidance portal. Always verify official notifications and gazette updates at: <a href="https://www.tnpsc.gov.in" target="_blank" rel="noopener">tnpsc.gov.in <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></a>
   </div>
 
-  <!-- Sticky Header & Navigation -->
-  <header class="header">
+  <!-- Sticky Header & Navigation (Landing Header Mode) -->
+  <header class="header landing-header">
     <div class="container navbar">
       <a href="/" class="brand-logo" id="brandLogo">
         <div class="brand-icon">
@@ -67,17 +72,27 @@
     </div>
   </header>
 
-  <!-- Hero Section with Realistic Generated Visual Banner -->
+  <!-- Landing Hero Section: Complete Platform Concept Explanation -->
   <section class="hero-section">
     <div class="container">
       <div class="hero-content">
         <div class="badge-pill">
-          <i class="fa-solid fa-compass"></i> Complete Guidance for All 8 TNPSC Groups
+          <i class="fa-solid fa-compass"></i> Complete Guidance Ecosystem for All 8 TNPSC Groups
         </div>
-        <h1 class="hero-title">Master TNPSC Examinations Step-by-Step</h1>
+        <h1 class="hero-title">Master TNPSC Civil Services Step-by-Step</h1>
         <p class="hero-subtitle">
-          Explore dedicated standalone guides for Group 1, Group 2 & 2A, Group 3, Group 4 & VAO (Code: 496), Group 5A, Group 6, Group 7B & 8, and Group 7A.
+          TNPSC Path provides structured, beginner-friendly guidance for all 8 official exam cadres — from Group 1 high-level state administration to Group 4 Code 496 VAO, Samacheer Kalvi textbook mappings, and community study notes.
         </p>
+
+        <!-- Primary Call to Action Button to Enter Exam Groups Hub -->
+        <div style="margin-bottom: 2.25rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="#groupsSection" class="btn btn-primary" id="enterPortalBtn" style="padding: 0.9rem 2.2rem; font-size: 1.05rem; border-radius: 12px; box-shadow: 0 8px 25px rgba(37, 99, 235, 0.45); font-weight: 700;">
+            <i class="fa-solid fa-layer-group"></i> Explore Exam Groups & Select Cadre <i class="fa-solid fa-arrow-down"></i>
+          </a>
+          <a href="/syllabus" class="btn btn-outline" style="padding: 0.9rem 1.8rem; font-size: 1rem; border-radius: 12px; color: #ffffff; border-color: rgba(255,255,255,0.3);">
+            <i class="fa-solid fa-book-open"></i> Syllabus Explorer
+          </a>
+        </div>
 
         <!-- Live Search Box -->
         <div class="search-box">
@@ -125,7 +140,7 @@
     </div>
   </section>
 
-  <!-- Exam Selection Cards Section (Dynamically Renders All 8 Groups) -->
+  <!-- Dedicated Exam Selection Cards Section (Displays All 8 Groups Only) -->
   <section class="groups-section" id="groupsSection">
     <div class="container">
       <div class="section-title-wrap">

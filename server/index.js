@@ -25,6 +25,7 @@ app.use((req, res, next) => {
 
 // Serve static assets
 app.use(express.static(path.join(__dirname, '../public')));
+app.use('/uploads', express.static(path.join(__dirname, '../public/uploads')));
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
 // Clean HTML page routing for all 8 TNPSC Groups & feature sections

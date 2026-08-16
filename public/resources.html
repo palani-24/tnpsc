@@ -178,9 +178,9 @@
             <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Uploaded by: <strong>${r.uploaderName || r.author || 'Senior Aspirant'}</strong></p>
             <div style="display:flex; justify-content:space-between; align-items:center; margin-top:auto; padding-top:0.75rem; border-top:1px solid var(--border-color);">
               <span style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-download"></i> ${r.downloads || 420} Downloads</span>
-              <a href="${r.downloadUrl || '#'}" download class="btn btn-primary" style="padding:0.35rem 0.85rem; font-size:0.82rem;" onclick="alert('Downloading ${r.title}')">
-                <i class="fa-solid fa-download"></i> Download PDF
-              </a>
+              <button class="btn btn-primary" style="padding:0.35rem 0.85rem; font-size:0.82rem;" onclick="window.downloadResource('${r.id}', '${r.fileName}', '${r.filePath || ''}')">
+                <i class="fa-solid fa-download"></i> Download Notes
+              </button>
             </div>
           `;
           grid.appendChild(card);
