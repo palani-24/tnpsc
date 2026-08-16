@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions (FAQ) | TNPSC Path</title>
+  <meta name="description" content="Get answers to all common questions regarding TNPSC exams, eligibility, age limits, Tamil language requirements, and preparation strategy.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Official Notice Disclaimer Banner -->
+  <div class="official-disclaimer-banner">
+    <i class="fa-solid fa-circle-info"></i> <strong>Official Verification Note:</strong> Information on this platform is for educational guidance. Always verify official notifications on the official website: <a href="https://www.tnpsc.gov.in" target="_blank" rel="noopener">tnpsc.gov.in <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></a>
+  </div>
+
+  <!-- Sticky Header & Navigation -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="/" class="brand-logo">
+        <div class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div class="brand-text">TNPSC <span>PATH</span></div>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li class="dropdown">
+          <a href="/" class="nav-link">Exam Groups <i class="fa-solid fa-chevron-down" style="font-size:0.75rem;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/group1" class="dropdown-item">Group 1 (Premier)</a></li>
+            <li><a href="/group2" class="dropdown-item">Group 2 & 2A</a></li>
+            <li><a href="/group3" class="dropdown-item">Group 3 Subordinate</a></li>
+          </ul>
+        </li>
+        <li><a href="/syllabus" class="nav-link">Syllabus</a></li>
+        <li><a href="/previous-papers" class="nav-link">Previous Papers</a></li>
+        <li><a href="/resources" class="nav-link">Shared Notes</a></li>
+        <li><a href="/study-plan" class="nav-link">Study Plans</a></li>
+        <li><a href="/guidance" class="nav-link">Guidance</a></li>
+        <li><a href="/faq" class="nav-link active">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Dark/Light Mode"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
+        <a href="/resources" class="btn btn-primary"><i class="fa-solid fa-cloud-arrow-up"></i> Upload Notes</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <div class="container" style="margin-top:2rem; margin-bottom:4rem;">
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+      <a href="/"><i class="fa-solid fa-house"></i> Home</a>
+      <i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i>
+      <span>Frequently Asked Questions</span>
+    </div>
+
+    <div class="section-title-wrap">
+      <h1 class="section-title">Frequently Asked Questions</h1>
+      <p class="section-desc">Clear answers to common questions asked by first-time TNPSC aspirants.</p>
+    </div>
+
+    <div class="syllabus-accordion" id="mainFaqAccordion">
+      <!-- Injected via JS -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 TNPSC Path. Educational Guidance. Verify official updates at <strong>tnpsc.gov.in</strong>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/api/faqs').then(r => r.json()).then(data => {
+        const accordion = document.getElementById('mainFaqAccordion');
+        if (accordion && data) {
+          accordion.innerHTML = '';
+          data.forEach((faq, index) => {
+            const itemEl = document.createElement('div');
+            itemEl.className = `accordion-item ${index === 0 ? 'active' : ''}`;
+            itemEl.innerHTML = `
+              <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                <div><i class="fa-solid fa-circle-question" style="color:var(--brand-accent); margin-right:0.5rem;"></i> ${faq.q}</div>
+                <i class="fa-solid fa-chevron-down accordion-icon"></i>
+              </div>
+              <div class="accordion-body"><p>${faq.a}</p></div>
+            `;
+            accordion.appendChild(itemEl);
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

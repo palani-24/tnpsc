@@ -1,0 +1,388 @@
+{
+  "groups": [
+    {
+      "id": "group1",
+      "code": "Group 1",
+      "name": "State Administrative Services",
+      "subtitle": "Premier Civil Service Examination in Tamil Nadu",
+      "badge": "Premier Service",
+      "difficulty": "High",
+      "qualification": "Any Bachelor's Degree (Any Discipline)",
+      "ageLimit": "21 to 34 years (Age relaxation up to 39 yrs for BC/MBC/SC/ST)",
+      "pattern": "3-Stage: Prelims (300 Marks), Mains (750 Marks), Interview (100 Marks)",
+      "posts": [
+        { "title": "Deputy Collector (Category I)", "dept": "Revenue Administration", "duties": "Sub-divisional magistrate, revenue collection, disaster management." },
+        { "title": "Deputy Superintendent of Police (DSP)", "dept": "Police Service", "duties": "Sub-divisional law & order, crime investigation, policing leadership." },
+        { "title": "Assistant Commissioner (Commercial Taxes)", "dept": "Commercial Taxes", "duties": "State revenue audit, GST enforcement, tax compliance." },
+        { "title": "District Registrar", "dept": "Registration Dept", "duties": "Property registration enforcement, stamp duty auditing." },
+        { "title": "Assistant Director of Rural Development", "dept": "Rural Development", "duties": "Panchayat Raj governance, rural infrastructure schemes." }
+      ],
+      "roadmap": [
+        "Month 1: School Textbooks & Base Building (6th to 10th Samacheer Kalvi Science & Social Science)",
+        "Month 2: Unit 8, Unit 9 & Indian Polity (TN History, Thirukkural, Welfare Schemes, Lakshmi Kanth)",
+        "Month 3: Test Series & Past 5 Years Official Question Paper Practice"
+      ]
+    },
+    {
+      "id": "group2",
+      "code": "Group 2 & 2A",
+      "name": "Combined Civil Services Examination II",
+      "subtitle": "Executive & Non-Executive State Cadre Posts",
+      "badge": "High Demand",
+      "difficulty": "Moderate to High",
+      "qualification": "Bachelor's Degree from any Recognized University",
+      "ageLimit": "18/20 to 32 years (Relaxations applicable per category)",
+      "pattern": "Prelims (300 Marks: 100 Language + 75 GS + 25 Aptitude), Mains Written Test",
+      "posts": [
+        { "title": "Sub-Registrar Grade II", "dept": "Registration Dept", "duties": "Land & property document registrations." },
+        { "title": "Municipal Commissioner Grade II", "dept": "Municipal Administration", "duties": "Civic administration & municipal development schemes." },
+        { "title": "Revenue Inspector (RI)", "dept": "Revenue Dept", "duties": "Field revenue surveys, income & community verification." },
+        { "title": "Senior Inspector of Cooperative Societies", "dept": "Cooperation Dept", "duties": "Auditing cooperative banks and societies." },
+        { "title": "Assistant Section Officer (ASO)", "dept": "TN Secretariat", "duties": "Policy drafting and file processing in Secretariat." }
+      ],
+      "roadmap": [
+        "Phase 1: Master 6th to 12th General Tamil / General English Textbooks (100 Qs Target 95+)",
+        "Phase 2: Unit 8, Unit 9 and General Studies Core Subjects",
+        "Phase 3: Daily Aptitude Practice (25 Qs Target 23+) and Full Length Mocks"
+      ]
+    },
+    {
+      "id": "group3",
+      "code": "Group 3 & 3A",
+      "name": "Combined Civil Services Examination III (Subordinate)",
+      "subtitle": "Subordinate Technical & Executive Cadres",
+      "badge": "Informational",
+      "difficulty": "Moderate",
+      "qualification": "HSC (10+2) / Diploma / Degree depending on post",
+      "ageLimit": "18 to 32 years (Category relaxations apply)",
+      "pattern": "Single Written Objective Exam (300 Marks: 100 Language + 75 GS + 25 Aptitude)",
+      "posts": [
+        { "title": "Junior Inspector of Cooperative Societies", "dept": "Cooperation Dept", "duties": "Field audit & verification of local cooperative societies." },
+        { "title": "Store-Keeper Grade II", "dept": "Industries & Commerce", "duties": "Inventory management & stock records in state stores." }
+      ],
+      "roadmap": [
+        "Step 1: Thorough reading of 6th to 10th Samacheer Kalvi SSLC syllabus",
+        "Step 2: Solve past 3 years Group 3 question papers",
+        "Step 3: Verify latest notification at tnpsc.gov.in"
+      ]
+    },
+    {
+      "id": "group4",
+      "code": "Group 4 & VAO",
+      "name": "Combined Civil Services Examination IV (Code: 496)",
+      "subtitle": "VAO, Junior Assistant, Typist, Steno-Typist & Bill Collector",
+      "badge": "Largest Vacancy",
+      "difficulty": "Moderate",
+      "qualification": "SSLC (10th Pass) with Tamil Language Proficiency / Typewriting certificate for Typist",
+      "ageLimit": "21 to 34 years for VAO; 18 to 32 years for Junior Assistant (Relaxable for SC/ST/MBC)",
+      "pattern": "Single Written Paper (SSLC Standard - 300 Marks - 200 Questions - 3 Hours):\nPart A: General Studies (75 Qs)\nPart B: Aptitude & Mental Ability (25 Qs)\nPart C: Tamil Eligibility-cum-Scoring Test (100 Qs)",
+      "posts": [
+        { "title": "Village Administrative Officer (VAO)", "dept": "Revenue Dept", "duties": "Village administration, land records, revenue collection, birth/death certificates." },
+        { "title": "Junior Assistant (Security & Non-Security)", "dept": "Various Government Depts", "duties": "Clerical assistance, file dispatch, public grievance record maintenance." },
+        { "title": "Typist", "dept": "Various Government Depts", "duties": "Official Tamil & English document typing and drafting." },
+        { "title": "Steno-Typist Grade III", "dept": "Various Government Depts", "duties": "Stenography, dictation taking, confidential correspondence." },
+        { "title": "Bill Collector Grade I", "dept": "Rural Development & Panchayats", "duties": "Tax collection & local body revenue accounting." }
+      ],
+      "roadmap": [
+        "Month 1: General Tamil Part C Coverage (6th to 10th Tamil textbooks - இலக்கணம், இலக்கியம், தமிழ் அறிஞர்கள்)",
+        "Month 2: General Studies 75 Qs (General Science, Geography, History/INM, Polity, Economy & TN Dev, Unit 8 TN Culture)",
+        "Month 3: Aptitude 25 Qs (15 Aptitude + 10 Reasoning) & Past 5 Years Group 4 Question Papers"
+      ]
+    },
+    {
+      "id": "group5a",
+      "code": "Group 5A",
+      "name": "Secretariat Service (Assistant Section Officer)",
+      "subtitle": "Direct Recruitment for ASO in Tamil Nadu Secretariat",
+      "badge": "Secretariat Cadre",
+      "difficulty": "Moderate to High",
+      "qualification": "Bachelor's Degree with Tamil Medium or English Medium specialization",
+      "ageLimit": "18 to 35 years (Relaxations applicable per category)",
+      "pattern": "Written Examination (General Studies, General Tamil/English & Secretariat Administrative Drafting)",
+      "posts": [
+        { "title": "Assistant Section Officer (ASO)", "dept": "TN Secretariat", "duties": "Policy drafting, legislative file analysis, cabinet note processing." }
+      ],
+      "roadmap": [
+        "Phase 1: Focus on General Studies and Secretariat Service Rules",
+        "Phase 2: Administrative Tamil & English drafting practice"
+      ]
+    },
+    {
+      "id": "group6",
+      "code": "Group 6",
+      "name": "Tamil Nadu Forest Service",
+      "subtitle": "Assistant Conservator of Forests (ACF)",
+      "badge": "Technical & Forest",
+      "difficulty": "High",
+      "qualification": "Bachelor's Degree in Forestry, Botany, Zoology, Physics, Chemistry, Agriculture or Engineering",
+      "ageLimit": "21 to 32 years (Relaxation up to 37 yrs for SC/ST/MBC)",
+      "pattern": "Prelims, Mains Written Exam (Optional Science Subjects) & Physical Fitness Test + Interview",
+      "posts": [
+        { "title": "Assistant Conservator of Forests (ACF)", "dept": "TN Forest Department", "duties": "Forest division administration, wildlife conservation, eco-restoration, anti-poaching leadership." }
+      ],
+      "roadmap": [
+        "Phase 1: Science Optional core subject preparation (Forestry/Botany/Zoology)",
+        "Phase 2: General Studies & Physical endurance test training"
+      ]
+    },
+    {
+      "id": "group7b-8",
+      "code": "Group 7B & 8",
+      "name": "Executive Officer Grade III & Grade IV",
+      "subtitle": "Hindu Religious & Charitable Endowments (HR&CE Dept)",
+      "badge": "Specialized Cadre",
+      "difficulty": "Moderate",
+      "qualification": "Grade III: Any Degree | Grade IV: SSLC Passed (Must profess Hindu Religion as per rules)",
+      "ageLimit": "25 to 37 years for Grade III; 18 to 37 years for Grade IV",
+      "pattern": "Written Examination:\nPaper 1: General Studies + General Tamil (SSLC Standard)\nPaper 2: Hindu Religion (சைவமும் வைணவமும் - Saivam & Vaishnavam)",
+      "posts": [
+        { "title": "Executive Officer Grade III", "dept": "HR & CE Department", "duties": "Administration of Grade III temples, audit of temple assets & land records." },
+        { "title": "Executive Officer Grade IV", "dept": "HR & CE Department", "duties": "Management of Grade IV temples, daily pooja registers, donation audits." }
+      ],
+      "roadmap": [
+        "Step 1: Study Hindu Religious Textbooks (சைவமும் வைணவமும் - 12th Ethics & HR&CE manual)",
+        "Step 2: General Tamil (100 Qs) & General Studies (100 Qs) preparation"
+      ]
+    },
+    {
+      "id": "group7a",
+      "code": "Group 7A",
+      "name": "Executive Officer Grade I",
+      "subtitle": "Senior Executive Officers in HR&CE Department",
+      "badge": "Senior HR&CE Cadre",
+      "difficulty": "High",
+      "qualification": "Degree in Arts / Science / Commerce / Law from a recognized University",
+      "ageLimit": "30 to 37 years (Relaxations applicable for SC/ST/MBC)",
+      "pattern": "Paper 1: General Studies (Degree Standard)\nPaper 2: Hindu Religion & Temple Law (Saivam, Vaishnavam & HR&CE Act 1959)",
+      "posts": [
+        { "title": "Executive Officer Grade I", "dept": "HR & CE Department", "duties": "Administration of major Grade I temples, heritage property protection, legal compliance." }
+      ],
+      "roadmap": [
+        "Phase 1: In-depth study of HR&CE Act 1959 & Agama Sastras",
+        "Phase 2: General Studies Degree Standard & Past Question Papers"
+      ]
+    }
+  ],
+
+  "syllabus": [
+    {
+      "unit": "Unit I",
+      "title": "General Science (5 Questions in Group 4 / GS Standard)",
+      "group": "Group 4 (Code 496) & GS",
+      "topics": "Nature of Universe - Measurement of physical quantities - Scientific laws in motion, force, pressure, energy - Everyday applications of mechanics, electricity, magnetism, light, sound, heat, nuclear physics - Elements, compounds, acids, bases, salts, petroleum products, fertilizers, pesticides - Main concepts of life science, genetics, physiology, nutrition, human diseases - Environmental science - Latest inventions in science & technology - Current affairs."
+    },
+    {
+      "unit": "Unit II",
+      "title": "Geography (5 Questions in Group 4 / GS Standard)",
+      "group": "Group 4 (Code 496) & GS",
+      "topics": "Earth location - Physical features - Monsoon, rainfall, weather, climate - Water resources, rivers, soil, minerals - Forest & wildlife - Agriculture pattern - Transport & communication - Population density & distribution in TN & India - Calamities, disaster management - Climate change - Geographical landmarks - Current affairs."
+    },
+    {
+      "unit": "Unit III",
+      "title": "History, Culture of India & Indian National Movement (10 Questions)",
+      "group": "Group 4 (Code 496) & GS",
+      "topics": "Indus Valley Civilization - Guptas, Delhi Sultans, Mughals, Marathas - South Indian History - National Renaissance - Early uprisings against British rule - Indian National Congress - Emergence of leaders (Ambedkar, Bhagat Singh, Bharathiar, VOC, Periyar, Nehru, Kamarajar, Gandhi, Rajaji, Subhash Chandra Bose, Muthulakshmi Ammaiyar, Muvalur Ramamirtham) - Freedom agitations of TN - Characteristics of Indian Culture, Unity in Diversity."
+    },
+    {
+      "unit": "Unit IV",
+      "title": "Indian Polity (15 Questions)",
+      "group": "Group 4 (Code 496) & GS",
+      "topics": "Constitution of India - Preamble - Salient features - Citizenship, Fundamental Rights, Fundamental Duties, DPSP - Union Executive & Legislature - State Executive & Legislature - Local Governments & Panchayat Raj - Federalism & Centre-State relations - Election & Judiciary - Rule of Law - Anti-corruption, Lokpal & Lokayukta - RTI - Women Empowerment - Human Rights - Political system in TN & India."
+    },
+    {
+      "unit": "Unit V",
+      "title": "Indian Economy & Development Administration in Tamil Nadu (20 Questions)",
+      "group": "Group 4 (Code 496) & GS",
+      "topics": "Nature of Indian Economy - Five-year plans - Niti Aayog - Reserve Bank of India - Finance Commission - GST - Employment generation, land reforms, agriculture science - Industrial growth - Rural welfare programmes - Education & Health systems in TN - Social justice & social harmony - Geography of TN & economic growth - Government welfare schemes - Current socio-economic issues."
+    },
+    {
+      "unit": "Unit VI",
+      "title": "History, Culture, Heritage & Socio-Political Movements of Tamil Nadu (20 Questions)",
+      "group": "Group 4 (Code 496) & GS",
+      "topics": "History of Tamil Society & archaeological discoveries - Tamil literature from Sangam age till contemporary times - Thirukkural (Secular literature, universal values, socio-political relevance, philosophical content) - Role of Tamil Nadu in freedom struggle - Role of women in freedom struggle - Social reform movements & social transformation of Tamil Nadu."
+    },
+    {
+      "unit": "Unit VII",
+      "title": "Part B: Aptitude and Mental Ability (SSLC Standard – 25 Questions)",
+      "group": "Group 4 (Code 496) & GS",
+      "topics": "Unit I: Aptitude (15 Qs): Simplification, Percentage, HCF & LCM, Ratio & Proportion, Simple Interest, Compound Interest, Area, Volume, Time & Work.\nUnit II: Reasoning (10 Qs): Logical reasoning, Puzzles, Dice, Visual reasoning, Alpha numeric reasoning, Number series."
+    },
+    {
+      "unit": "Unit VIII",
+      "title": "Part C: தமிழ் தகுதி மற்றும் மதிப்பீட்டுத் தேர்வு (SSLC Standard - 100 Questions)",
+      "group": "Group 4 (Code 496) Tamil",
+      "topics": "அலகு I: இலக்கணம் (25 Qs) - பிரித்து/சேர்த்து எழுதுதல், சந்திப்பிழை, ல/ள/ழ, ன/ண, ர/ற வேறுபாடு, சுட்டு/வினா எழுத்துக்கள், வேர்ச்சொல், தொழிற் பெயர், வினையெச்சம்.\nஅலகு II: சொல்லகராதி (15 Qs) - எதிர்ச்சொல், அகரவரிசைப்படி சீர்செய்தல், மரூஉச் சொற்கள் (புதுச்சேரி->புதுவை), பிழை திருத்துதல் (ஒரு/ஓர், வெற்றிலை).\nஅலகு III: எழுதும் திறன் (15 Qs) - செய்வினை, செயப்பாட்டு வினை, தன்வினை, பிறவினை, திணை/பால் மரபு, நிறுத்தற்குறிகள்.\nஅலகு IV: கலைச் சொற்கள் (10 Qs) - search engine (தேடு பொறி), Migration (வலசை), Allergy (ஒவ்வாமை), Gene (மரபணு), Nautical Mile (கடல் மைல்).\nஅலகு V: வாசித்தல் (15 Qs) - பத்தி வினாக்கள், உவமைத் தொடர், பழமொழிகள்.\nஅலகு VI: எளிய மொழிபெயர்ப்பு (5 Qs) - pendrive, printer, computer, keyboard.\nஅலகு VII: இலக்கியம் & தமிழ் சான்றோர்கள் (15 Qs) - திருக்குறள் (20 அதிகாரங்கள்), நாலடியார், உ.வே.சா, தேவநேயப் பாவாணர், ஜி.யு.போப், வீரமாமுனிவர், பாரதிதாசன், கண்ணதாசன், காமராஜர், காயிதே மில்லத், வேலுநாச்சியார்."
+    },
+    {
+      "unit": "Unit IX",
+      "title": "Part C Alternative: General English (SSLC Standard - 100 Questions)",
+      "group": "Group 4 (Code 496) English",
+      "topics": "Unit I: Grammar (25 Qs) - Parts of speech, Concord, Tense, Voice, Sentences, Verbs, Question tags.\nUnit II: Vocabulary (15 Qs) - Synonyms, Antonyms, Homonyms, Idioms, Phrasal verbs, One word substitution.\nUnit III: Writing Skills (10 Qs) - Letter writing, Jumbled sentences.\nUnit IV: Technical Terms (10 Qs) - Administrative & department terms.\nUnit V: Reading Comprehension (20 Qs) - Passages, Headlines, Sentence completion.\nUnit VI: Translation (5 Qs) - Word & sentence translation.\nUnit VII: Literary Works (15 Qs) - Poems (Robert Frost, Emily Dickinson, Tupac Shakur) & Prose (Liam O'Flaherty, C.V. Raman, Ramanujan, Nehru)."
+    },
+    {
+      "unit": "Unit X",
+      "title": "Specialized Units: HR&CE Saivam & Vaishnavam / Forest Science",
+      "group": "Group 7B, 8, 7A & Group 6",
+      "topics": "Hindu Religion (சைவமும் வைணவமும்): சைவ ஆகமங்கள், 12 திருமுறைகள், 4000 திவ்ய பிரபந்தம், கோயில் நிர்வாக சட்டங்கள் (HR&CE Act 1959).\nForest Science: Forestry management, silviculture, forest mensuration, wildlife ecology."
+    }
+  ],
+
+  "pyqs": [
+    {
+      "id": "pyq-g4-2024",
+      "title": "TNPSC Group 4 & VAO Official Prelims Exam Question Paper (Code 496)",
+      "group": "Group 4",
+      "year": "2024",
+      "stage": "Single Written",
+      "subject": "General Studies (75) + Aptitude (25) + General Tamil (100)",
+      "fileSize": "4.2 MB",
+      "fileName": "TNPSC_Group4_2024_Official_Paper.pdf"
+    },
+    {
+      "id": "pyq-g1-2023",
+      "title": "TNPSC Group 1 Prelims Question Paper & Official Key",
+      "group": "Group 1",
+      "year": "2023",
+      "stage": "Prelims",
+      "subject": "General Studies (175) + Aptitude (25)",
+      "fileSize": "3.8 MB",
+      "fileName": "TNPSC_Group1_2023_Prelims.pdf"
+    },
+    {
+      "id": "pyq-g2-2022",
+      "title": "TNPSC Group 2 & 2A Prelims Question Paper",
+      "group": "Group 2",
+      "year": "2022",
+      "stage": "Prelims",
+      "subject": "General Tamil (100) + General Studies (75) + Aptitude (25)",
+      "fileSize": "3.5 MB",
+      "fileName": "TNPSC_Group2_2022_Prelims.pdf"
+    },
+    {
+      "id": "pyq-g7b-2023",
+      "title": "TNPSC Group 7B Executive Officer Grade III Question Paper",
+      "group": "Group 7B & 8",
+      "year": "2023",
+      "stage": "Written",
+      "subject": "Paper I (GS & Tamil) + Paper II (சைவமும் வைணவமும்)",
+      "fileSize": "3.1 MB",
+      "fileName": "TNPSC_Group7B_2023_EO.pdf"
+    },
+    {
+      "id": "pyq-g4-2022",
+      "title": "TNPSC Group 4 & VAO Question Paper with Answer Key",
+      "group": "Group 4",
+      "year": "2022",
+      "stage": "Single Written",
+      "subject": "General Studies & General Tamil",
+      "fileSize": "4.0 MB",
+      "fileName": "TNPSC_Group4_2022_Paper.pdf"
+    }
+  ],
+
+  "resources": [
+    {
+      "id": "res-g4-tamil-notes",
+      "title": "6th to 10th Samacheer Tamil - All 7 Units Handcrafted Notes",
+      "uploadedBy": "Selvam M. (Group 4 Topper)",
+      "group": "Group 4",
+      "type": "Notes",
+      "subject": "General Tamil (100 Qs)",
+      "description": "Comprehensive notes covering இலக்கணம், கலைச் சொற்கள், நிறுத்தற்குறிகள், and திருக்குறள் 20 அதிகாரங்கள்.",
+      "downloads": 482,
+      "fileName": "Group4_General_Tamil_Complete_Notes.pdf"
+    },
+    {
+      "id": "res-g4-code496-syllabus",
+      "title": "Official TNPSC Group 4 Gazette Syllabus PDF (Code: 496)",
+      "uploadedBy": "TNPSC Path Official",
+      "group": "Group 4",
+      "type": "Syllabus",
+      "subject": "Official Gazette Notification",
+      "description": "Complete 4-page official revised syllabus document published on 12.12.2024.",
+      "downloads": 890,
+      "fileName": "Group4_Official_Syllabus_Code_496.pdf"
+    },
+    {
+      "id": "res-unit8-notes",
+      "title": "Unit 8: Tamil Nadu History & Thirukkural Quick Revision Material",
+      "uploadedBy": "Anitha Rajan (Aspirant)",
+      "group": "Group 1",
+      "type": "Notes",
+      "subject": "Unit 8 TN History",
+      "description": "Short summary notes for Sangam Literature, Freedom fighters of TN, and Thirukkural universal values.",
+      "downloads": 350,
+      "fileName": "Unit8_TN_History_Thirukkural_Notes.pdf"
+    },
+    {
+      "id": "res-hrce-saivam",
+      "title": "HR&CE Group 7B & 8 - சைவமும் வைணவமும் Key Formulas & Terms",
+      "uploadedBy": "Kalyanasundaram (Instructor)",
+      "group": "Group 7B & 8",
+      "type": "Notes",
+      "subject": "Hindu Religion",
+      "description": "Detailed notes on Saiva Siddhantam, Vaishnava Alwars, 12 Thirumurai, and Temple Law basics.",
+      "downloads": 210,
+      "fileName": "HRCE_Saivam_Vaishnavam_Notes.pdf"
+    }
+  ],
+
+  "guidance": [
+    {
+      "id": "g-g4-strategy",
+      "title": "How to Score 170+ Out of 200 in TNPSC Group 4 & VAO Exam (Code 496)",
+      "category": "Group 4 Strategy",
+      "readTime": "6 min read",
+      "summary": "Mastering the 100-question General Tamil paper and 25 Aptitude questions guarantees a top merit rank in Group 4.",
+      "points": [
+        "1. General Tamil (100 Qs): Spend 50% of your daily study time reading 6th to 10th Samacheer Tamil textbooks.",
+        "2. Aptitude & Mental Ability (25 Qs): Practice 25 questions daily from HCF/LCM, Ratio, Simplification, and Interest.",
+        "3. Unit 8 & Unit 9 in GS (75 Qs): Focus on Tamil Nadu History, Freedom Movement, and Development Schemes.",
+        "4. Weekly Mock Tests: Attempt 3 full-length 200-question OMR mock tests before exam day."
+      ]
+    },
+    {
+      "id": "g-beginner-books",
+      "title": "Which Samacheer Kalvi Books to Read First for TNPSC Beginners?",
+      "category": "Booklist Guide",
+      "readTime": "5 min read",
+      "summary": "Prioritize 6th to 10th Tamil, Social Science (History, Civics, Geography), and Science textbooks.",
+      "points": [
+        "• 6th - 10th Tamil Textbooks (Compulsory for Part C 100 Qs)",
+        "• 6th - 10th Social Science (Covers History, Polity, Geography, Economy)",
+        "• 11th & 12th History & Political Science (For Group 1 & Group 2 Mains)"
+      ]
+    },
+    {
+      "id": "g-hrce-guide",
+      "title": "Preparation Strategy for Executive Officer Grade III & IV (Group 7B & 8)",
+      "category": "Specialized Exam",
+      "readTime": "4 min read",
+      "summary": "Key tips to master Paper II (சைவமும் வைணவமும்) and General Studies.",
+      "points": [
+        "1. Read 12th Ethics textbook chapters on Saivism & Vaishnavism.",
+        "2. Memorize key works of 63 Nayanmars & 12 Alwars.",
+        "3. Understand HR&CE Act 1959 basic provisions."
+      ]
+    }
+  ],
+
+  "faqs": [
+    {
+      "q": "What are the 8 Exam Groups in TNPSC?",
+      "a": "TNPSC conducts recruitment under 8 major group categories:\n1. Group 1: Premier State Administrative Services (Deputy Collector, DSP)\n2. Group 2 & 2A: Executive & Non-Executive Posts (Sub-Registrar, RI)\n3. Group 3 & 3A: Subordinate Services (Junior Inspector)\n4. Group 4 & VAO (Code: 496): Village Administrative Officer, Junior Assistant, Typist, Steno\n5. Group 5A: Assistant Section Officer in TN Secretariat\n6. Group 6: Assistant Conservator of Forests (ACF)\n7. Group 7B & 8: Executive Officer Grade III & IV in HR&CE Department\n8. Group 7A: Executive Officer Grade I in HR&CE Department"
+    },
+    {
+      "q": "What is the qualification and exam pattern for TNPSC Group 4 (Code 496)?",
+      "a": "Qualification: SSLC (10th Pass). Pattern: Single OMR written test of 3 Hours with 200 Questions (300 Marks):\n• Part A: General Studies (75 Qs)\n• Part B: Aptitude & Mental Ability (25 Qs)\n• Part C: General Tamil Eligibility-cum-Scoring Test (100 Qs) or General English."
+    },
+    {
+      "q": "Is General Tamil compulsory for TNPSC Examinations?",
+      "a": "Yes! Tamil Eligibility Test is mandatory across all TNPSC examinations. In Group 4 and Group 2 Prelims, Part C consists of 100 General Tamil questions that directly count towards your merit score."
+    },
+    {
+      "q": "Can final year college students apply for Group 1 and Group 2?",
+      "a": "Candidates must possess the required degree qualification on or before the date of official notification release to be eligible to apply."
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Official TNPSC Syllabus Explorer (Units 1 to 10 & Code 496) | TNPSC Path</title>
+  <meta name="description" content="Explore official TNPSC syllabus across all 8 groups with Samacheer school book 6th-12th mapping, unit weightage, and Group 4 Code 496 revised syllabus.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Official Notice Disclaimer Banner -->
+  <div class="official-disclaimer-banner">
+    <i class="fa-solid fa-circle-info"></i> <strong>Official Verification Note:</strong> Educational guidance. Always verify official notifications on: <a href="https://www.tnpsc.gov.in" target="_blank" rel="noopener">tnpsc.gov.in <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></a>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="/" class="brand-logo">
+        <div class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div class="brand-text">TNPSC <span>PATH</span></div>
+      </a>
+
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="/" class="nav-link">Exam Groups <i class="fa-solid fa-chevron-down" style="font-size:0.75rem;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/group1" class="dropdown-item">Group 1 (Premier)</a></li>
+            <li><a href="/group2" class="dropdown-item">Group 2 & 2A</a></li>
+            <li><a href="/group3" class="dropdown-item">Group 3 Subordinate</a></li>
+            <li><a href="/group4" class="dropdown-item">Group 4 & VAO (Code: 496)</a></li>
+            <li><a href="/group5a" class="dropdown-item">Group 5A Secretariat</a></li>
+            <li><a href="/group6" class="dropdown-item">Group 6 Forest Service</a></li>
+            <li><a href="/group7b-8" class="dropdown-item">Group 7B & 8 HR&CE</a></li>
+            <li><a href="/group7a" class="dropdown-item">Group 7A HR&CE Grade I</a></li>
+          </ul>
+        </li>
+        <li><a href="/syllabus" class="nav-link active">Syllabus</a></li>
+        <li><a href="/previous-papers" class="nav-link">Previous Papers</a></li>
+        <li><a href="/resources" class="nav-link">Shared Notes</a></li>
+        <li><a href="/study-plan" class="nav-link">Study Plans</a></li>
+        <li><a href="/guidance" class="nav-link">Guidance</a></li>
+        <li><a href="/faq" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Dark/Light Mode"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
+        <a href="/resources" class="btn btn-primary"><i class="fa-solid fa-cloud-arrow-up"></i> Upload Notes</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Visual Banner -->
+  <div style="background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.75)), url('/images/syllabus_banner.jpg') center/cover no-repeat; color:#ffffff; padding:3rem 0; margin-bottom:2rem;">
+    <div class="container">
+      <div class="breadcrumbs" style="color:#cbd5e1; margin-bottom:0.75rem;">
+        <a href="/" style="color:#ffffff;"><i class="fa-solid fa-house"></i> Home</a>
+        <i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i>
+        <span>Syllabus Explorer</span>
+      </div>
+      <h1 style="font-size:2.4rem; font-weight:800; margin-bottom:0.5rem;">TNPSC Official Syllabus Explorer & School Book Reference</h1>
+      <p style="color:#cbd5e1; font-size:1.1rem; max-width:850px;">
+        Complete breakdown of General Studies (Units I to X), General Tamil (7 Units), and HR&CE Agama papers mapped with <strong>Samacheer Kalvi 6th to 12th standard textbooks</strong>.
+      </p>
+    </div>
+  </div>
+
+  <!-- Content Container -->
+  <div class="container" style="margin-bottom:4rem;">
+
+    <!-- Group Selector Tabs -->
+    <div class="tab-nav">
+      <button class="tab-btn active" onclick="switchSyllabusTab('gs')"><i class="fa-solid fa-book"></i> General Studies (Units I - X)</button>
+      <button class="tab-btn" onclick="switchSyllabusTab('g4')"><i class="fa-solid fa-file-signature"></i> Group 4 Code: 496 Official Syllabus</button>
+      <button class="tab-btn" onclick="switchSyllabusTab('tamil')"><i class="fa-solid fa-pen-nib"></i> General Tamil (பொதுத் தமிழ்)</button>
+      <button class="tab-btn" onclick="switchSyllabusTab('hrce')"><i class="fa-solid fa-gopuram"></i> HR&CE Saivam & Vaishnavam</button>
+    </div>
+
+    <!-- Live Search -->
+    <div style="margin-bottom:1.5rem;">
+      <input type="text" id="syllabusSearchInput" placeholder="Search syllabus topics (e.g. Thirukkural, Polity Article 370, Aptitude LCM, Indus Valley)..." style="width:100%; padding:0.8rem 1.2rem; border-radius:var(--radius-md); border:1px solid var(--border-color); outline:none; font-size:0.95rem; background:var(--bg-surface); color:var(--text-main);">
+    </div>
+
+    <!-- GS Units Tab -->
+    <div id="syllabusTabGS" class="tab-content active">
+      <div id="gsUnitsAccordionContainer">
+        <!-- Accordion items rendered dynamically -->
+      </div>
+    </div>
+
+    <!-- Group 4 Code 496 Tab -->
+    <div id="syllabusTabG4" class="tab-content">
+      <div class="card-detail" style="background:var(--bg-surface); padding:2rem; border-radius:var(--radius-lg); border:1px solid var(--border-color);">
+        <span class="badge-pill" style="background:rgba(37,99,235,0.15); color:var(--brand-accent);"><i class="fa-solid fa-certificate"></i> Code: 496 Revised Gazette (12.12.2024)</span>
+        <h3 style="font-size:1.5rem; margin:0.5rem 0 1rem;">Group 4 & VAO Examination Structure</h3>
+        <p style="color:var(--text-muted); margin-bottom:1.5rem;">Single Stage OMR Examination (3 Hours, 200 Questions, 300 Marks, Minimum Qualifying Marks: 90).</p>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.25rem;">
+          <div style="background:var(--bg-subtle); padding:1.25rem; border-radius:var(--radius-md); border-left:4px solid var(--brand-accent);">
+            <h4>Part A: General Studies (SSLC Standard)</h4>
+            <p style="font-size:0.88rem; color:var(--text-muted); margin-top:0.25rem;">75 Questions / 112.5 Marks</p>
+            <ul style="margin-top:0.75rem; font-size:0.88rem; line-height:1.6; padding-left:1.2rem;">
+              <li>General Science (Physics, Chemistry, Botany, Zoology) - 5 Qs</li>
+              <li>Geography of India & Tamil Nadu - 5 Qs</li>
+              <li>History & Indian National Movement - 10 Qs</li>
+              <li>Indian Polity & Governance - 15 Qs</li>
+              <li>Indian Economy & TN Dev Administration - 20 Qs</li>
+              <li>Unit 8: TN History, Culture & Thirukkural - 20 Qs</li>
+            </ul>
+          </div>
+
+          <div style="background:var(--bg-subtle); padding:1.25rem; border-radius:var(--radius-md); border-left:4px solid var(--brand-gold);">
+            <h4>Part B: Aptitude & Mental Ability</h4>
+            <p style="font-size:0.88rem; color:var(--text-muted); margin-top:0.25rem;">25 Questions / 37.5 Marks</p>
+            <ul style="margin-top:0.75rem; font-size:0.88rem; line-height:1.6; padding-left:1.2rem;">
+              <li>Simplification, Percentage, HCF & LCM - 15 Qs</li>
+              <li>Ratio & Proportion, Simple & Compound Interest</li>
+              <li>Area & Volume Geometry</li>
+              <li>Logical Reasoning, Puzzles & Dice - 10 Qs</li>
+            </ul>
+          </div>
+
+          <div style="background:var(--bg-subtle); padding:1.25rem; border-radius:var(--radius-md); border-left:4px solid var(--brand-secondary);">
+            <h4>Part C: Tamil Eligibility & Assessment Test</h4>
+            <p style="font-size:0.88rem; color:var(--text-muted); margin-top:0.25rem;">100 Questions / 150 Marks</p>
+            <ul style="margin-top:0.75rem; font-size:0.88rem; line-height:1.6; padding-left:1.2rem;">
+              <li>7 Units (இலக்கணம், சொல்லகராதி, வாசித்தல், மொழிபெயர்ப்பு, இலக்கியம் & சான்றோர்கள்)</li>
+              <li>Minimum 40% (60 Marks) mandatory in Part C for General Studies paper valuation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- General Tamil Tab -->
+    <div id="syllabusTabTamil" class="tab-content">
+      <div class="accordion-item active">
+        <div class="accordion-header">
+          <div><i class="fa-solid fa-pen-nib" style="color:var(--brand-accent);"></i> <strong>பகுதி அ - இலக்கணம் (Grammar - 25 Questions)</strong></div>
+        </div>
+        <div class="accordion-body" style="display:block;">
+          <p>பொருத்துதல், தொடரும் தொடர்பு அறிதல், பிரித்தெழுதுக, எதிர்ச்சொல், பொருந்தாச் சொல்லைக் கண்டறிதல், பிழை திருத்தம், மரபுப் பிழைகள், வழுவுச் சொற்களை நீக்குதல்.</p>
+          <div style="margin-top:0.5rem; font-size:0.85rem; color:var(--brand-accent); font-weight:600;"><i class="fa-solid fa-book-bookmark"></i> Reference: Samacheer Tamil Textbooks 6th to 10th Standard (இலக்கணப் பகுதி)</div>
+        </div>
+      </div>
+
+      <div class="accordion-item active">
+        <div class="accordion-header">
+          <div><i class="fa-solid fa-book-open" style="color:var(--brand-gold);"></i> <strong>பகுதி ஆ - இலக்கியம் (Literature - 35 Questions)</strong></div>
+        </div>
+        <div class="accordion-body" style="display:block;">
+          <p>திருக்குறள் (அறத்துப்பால், பொருட்பால் 20 அதிகாரங்கள்), எட்டுத்தொகை, பத்துப்பாட்டு, ஐம்பெருங்காப்பியங்கள், ஐஞ்சிறுங்காப்பியங்கள், சிற்றிலக்கியங்கள், மனோன்மணியம், பாஞ்சாலி சபதம், கம்பராமாயணம்.</p>
+          <div style="margin-top:0.5rem; font-size:0.85rem; color:var(--brand-accent); font-weight:600;"><i class="fa-solid fa-book-bookmark"></i> Reference: Samacheer Tamil Textbooks 6th to 12th Standard (செய்யுள் பகுதி)</div>
+        </div>
+      </div>
+
+      <div class="accordion-item active">
+        <div class="accordion-header">
+          <div><i class="fa-solid fa-user-graduate" style="color:var(--brand-secondary);"></i> <strong>பகுதி இ - தமிழ் அறிஞர்களும் தமிழ்த் தொண்டும் (40 Questions)</strong></div>
+        </div>
+        <div class="accordion-body" style="display:block;">
+          <p>பாரதியார், பாரதிதாசன், நாமக்கல் கவிஞர், கவிமணி, தேவதாசி முறை ஒழிப்பு, முத்துலட்சுமி ரெட்டி, மூவலூர் ராமாமிர்தம், மறைமலை அடிகள், பரிதிமாற்கலைஞர், தமிழ் இதழ்கள்.</p>
+          <div style="margin-top:0.5rem; font-size:0.85rem; color:var(--brand-accent); font-weight:600;"><i class="fa-solid fa-book-bookmark"></i> Reference: Samacheer Tamil Textbooks 6th to 12th Standard (உரைநடை & துணைப்பாடம்)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HRCE Tab -->
+    <div id="syllabusTabHRCE" class="tab-content">
+      <div class="card-detail" style="background:var(--bg-surface); padding:2rem; border-radius:var(--radius-lg); border:1px solid var(--border-color);">
+        <h3 style="font-size:1.4rem; margin-bottom:1rem;"><i class="fa-solid fa-gopuram" style="color:var(--brand-gold);"></i> Group 7B & 8 HR&CE Special Agama Syllabus</h3>
+        <p style="color:var(--text-muted); margin-bottom:1rem;">Dedicated Paper 2 syllabus for Executive Officer Grade III & IV (Hindu Religious & Charitable Endowments Dept).</p>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+          <div style="background:var(--bg-subtle); padding:1.25rem; border-radius:var(--radius-md);">
+            <h4 style="color:var(--brand-primary);"><i class="fa-solid fa-om"></i> சைவ சமயம் (Saivism - 50 Questions)</h4>
+            <p style="font-size:0.88rem; margin-top:0.5rem; line-height:1.6;">
+              சிவபெருமான் தோற்றம், பன்னிரு திருமுறைகள், தேவாரம், திருவாசகம், சிவஞானபோதம், நாயன்மார்கள் 63 வரலாறு, ஆலய அமைப்பு முறைகள், சைவ சித்தாந்தம் (பதி, பசு, பாசம்).
+            </p>
+          </div>
+
+          <div style="background:var(--bg-subtle); padding:1.25rem; border-radius:var(--radius-md);">
+            <h4 style="color:var(--brand-primary);"><i class="fa-solid fa-dharmachakra"></i> வைணவ சமயம் (Vaishnavism - 50 Questions)</h4>
+            <p style="font-size:0.88rem; margin-top:0.5rem; line-height:1.6;">
+              திருமால் தோற்றம், நாலாயிர திவ்ய பிரபந்தம், ஆழ்வார்கள் 12 வரலாறு, ராமானுஜர் விசிஷ்டாத்வைதம், வைணவ ஆகமங்கள் (பாஞ்சராத்ரம், வைகானசம்), திவ்ய தேசங்கள் 108.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 TNPSC Path. Educational Guidance. Verify official updates at <strong>tnpsc.gov.in</strong>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    function switchSyllabusTab(tabKey) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+      event.currentTarget.classList.add('active');
+      if (tabKey === 'gs') document.getElementById('syllabusTabGS').classList.add('active');
+      if (tabKey === 'g4') document.getElementById('syllabusTabG4').classList.add('active');
+      if (tabKey === 'tamil') document.getElementById('syllabusTabTamil').classList.add('active');
+      if (tabKey === 'hrce') document.getElementById('syllabusTabHRCE').classList.add('active');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/api/syllabus').then(r => r.json()).then(units => {
+        const container = document.getElementById('gsUnitsAccordionContainer');
+        if (!container) return;
+        container.innerHTML = '';
+
+        units.forEach(u => {
+          const item = document.createElement('div');
+          item.className = 'accordion-item';
+          item.innerHTML = `
+            <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+              <div>
+                <span>Unit ${u.unit}</span>
+                <strong>${u.name}</strong>
+              </div>
+              <i class="fa-solid fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="accordion-body">
+              <p style="margin-bottom:0.75rem;">${u.topics}</p>
+              <div style="background:var(--bg-subtle); padding:0.75rem; border-radius:var(--radius-sm); font-size:0.85rem; color:var(--brand-accent); font-weight:600;">
+                <i class="fa-solid fa-book-open"></i> Samacheer Book Reference: ${u.bookReferences || '6th - 12th Standard Social Science & Science Textbooks'}
+              </div>
+            </div>
+          `;
+          container.appendChild(item);
+        });
+      });
+
+      const searchInput = document.getElementById('syllabusSearchInput');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const query = e.target.value.toLowerCase();
+          document.querySelectorAll('.accordion-item').forEach(item => {
+            const text = item.innerText.toLowerCase();
+            if (text.includes(query)) {
+              item.style.display = 'block';
+              item.classList.add('active');
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

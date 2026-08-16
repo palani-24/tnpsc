@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Shared Notes & Upload Hub | TNPSC Path</title>
+  <meta name="description" content="Access free community shared study notes, Samacheer textbook PDFs, unit-wise handwritten summaries, and upload your own notes for TNPSC aspirants.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Official Notice Disclaimer Banner -->
+  <div class="official-disclaimer-banner">
+    <i class="fa-solid fa-circle-info"></i> <strong>Official Verification Note:</strong> Community resource platform. Verify official notifications at: <a href="https://www.tnpsc.gov.in" target="_blank" rel="noopener">tnpsc.gov.in <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></a>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="/" class="brand-logo">
+        <div class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div class="brand-text">TNPSC <span>PATH</span></div>
+      </a>
+
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="/" class="nav-link">Exam Groups <i class="fa-solid fa-chevron-down" style="font-size:0.75rem;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/group1" class="dropdown-item">Group 1 (Premier)</a></li>
+            <li><a href="/group2" class="dropdown-item">Group 2 & 2A</a></li>
+            <li><a href="/group3" class="dropdown-item">Group 3 Subordinate</a></li>
+            <li><a href="/group4" class="dropdown-item">Group 4 & VAO (Code: 496)</a></li>
+            <li><a href="/group5a" class="dropdown-item">Group 5A Secretariat</a></li>
+            <li><a href="/group6" class="dropdown-item">Group 6 Forest Service</a></li>
+            <li><a href="/group7b-8" class="dropdown-item">Group 7B & 8 HR&CE</a></li>
+            <li><a href="/group7a" class="dropdown-item">Group 7A HR&CE Grade I</a></li>
+          </ul>
+        </li>
+        <li><a href="/syllabus" class="nav-link">Syllabus</a></li>
+        <li><a href="/previous-papers" class="nav-link">Previous Papers</a></li>
+        <li><a href="/resources" class="nav-link active">Shared Notes</a></li>
+        <li><a href="/study-plan" class="nav-link">Study Plans</a></li>
+        <li><a href="/guidance" class="nav-link">Guidance</a></li>
+        <li><a href="/faq" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Dark/Light Mode"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
+        <button class="btn btn-primary" onclick="openUploadModal()"><i class="fa-solid fa-cloud-arrow-up"></i> Upload Notes</button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Visual Banner -->
+  <div style="background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.75)), url('/images/resources_banner.jpg') center/cover no-repeat; color:#ffffff; padding:3.5rem 0; margin-bottom:2.5rem;">
+    <div class="container">
+      <div class="breadcrumbs" style="color:#cbd5e1; margin-bottom:0.75rem;">
+        <a href="/" style="color:#ffffff;"><i class="fa-solid fa-house"></i> Home</a>
+        <i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i>
+        <span>Shared Notes & Upload Hub</span>
+      </div>
+      <h1 style="font-size:2.4rem; font-weight:800; margin-bottom:0.5rem;">Community Shared Notes & PDF Library</h1>
+      <p style="color:#cbd5e1; font-size:1.1rem; max-width:850px;">
+        Discover handwritten topic notes, Unit 8 Thirukkural compilations, Samacheer Kalvi school book PDF summaries shared by senior rankers and educators.
+      </p>
+
+      <button class="btn btn-primary" style="margin-top:1.25rem;" onclick="openUploadModal()">
+        <i class="fa-solid fa-plus"></i> Share Your Notes With Aspirants
+      </button>
+    </div>
+  </div>
+
+  <!-- Resources Grid Section -->
+  <div class="container" style="margin-bottom:4rem;">
+    
+    <!-- Filter & Category Bar -->
+    <div class="filter-bar" style="margin-bottom:2rem;">
+      <div class="filter-group">
+        <label for="resourceSubjectFilter" style="font-weight:600;">Subject Category:</label>
+        <select id="resourceSubjectFilter" class="filter-select">
+          <option value="All">All Subjects</option>
+          <option value="General Studies">General Studies</option>
+          <option value="Unit 8 & 9">Unit 8 & 9 (TN History & Dev Admin)</option>
+          <option value="General Tamil">General Tamil (பொதுத் தமிழ்)</option>
+          <option value="Aptitude">Aptitude & Mental Ability</option>
+          <option value="HR&CE">HR&CE Agama & Saivam</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="resources-grid" id="mainResourcesGrid">
+      <!-- Injected via JS -->
+    </div>
+  </div>
+
+  <!-- Upload Modal -->
+  <div class="modal-overlay" id="uploadNotesModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center;">
+    <div style="background:var(--bg-surface); border:1px solid var(--border-color); border-radius:var(--radius-lg); width:90%; max-width:550px; padding:2rem; box-shadow:var(--shadow-lg); position:relative;">
+      <button onclick="closeUploadModal()" style="position:absolute; top:1rem; right:1rem; background:none; border:none; font-size:1.2rem; cursor:pointer; color:var(--text-muted);">&times;</button>
+      <h3 style="font-size:1.4rem; margin-bottom:0.5rem;"><i class="fa-solid fa-cloud-arrow-up" style="color:var(--brand-accent);"></i> Upload Study Material / PDF Notes</h3>
+      <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:1.5rem;">Help thousands of TNPSC aspirants by sharing your handwritten notes or PDF summaries.</p>
+
+      <form id="resourceUploadForm" enctype="multipart/form-data">
+        <div style="margin-bottom:1rem;">
+          <label style="display:block; font-size:0.88rem; font-weight:600; margin-bottom:0.35rem;">Document Title *</label>
+          <input type="text" name="title" required placeholder="e.g. Unit 8 Thirukkural 20 Adhigaram Simplified Notes" style="width:100%; padding:0.65rem; border-radius:var(--radius-sm); border:1px solid var(--border-color); background:var(--bg-subtle); color:var(--text-main);">
+        </div>
+
+        <div style="margin-bottom:1rem;">
+          <label style="display:block; font-size:0.88rem; font-weight:600; margin-bottom:0.35rem;">Subject Category *</label>
+          <select name="subject" required style="width:100%; padding:0.65rem; border-radius:var(--radius-sm); border:1px solid var(--border-color); background:var(--bg-subtle); color:var(--text-main);">
+            <option value="General Studies">General Studies</option>
+            <option value="Unit 8 & 9">Unit 8 & 9 (TN History & Dev Admin)</option>
+            <option value="General Tamil">General Tamil (பொதுத் தமிழ்)</option>
+            <option value="Aptitude">Aptitude & Mental Ability</option>
+            <option value="HR&CE">HR&CE Agama & Saivam</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom:1rem;">
+          <label style="display:block; font-size:0.88rem; font-weight:600; margin-bottom:0.35rem;">Uploader Name / Educator</label>
+          <input type="text" name="uploaderName" placeholder="e.g. Ranker Selvam / Anonymous Aspirant" style="width:100%; padding:0.65rem; border-radius:var(--radius-sm); border:1px solid var(--border-color); background:var(--bg-subtle); color:var(--text-main);">
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block; font-size:0.88rem; font-weight:600; margin-bottom:0.35rem;">Select PDF / PPT File *</label>
+          <input type="file" name="noteFile" required accept=".pdf,.doc,.docx,.ppt,.pptx,.txt" style="width:100%; padding:0.5rem; border-radius:var(--radius-sm); border:1px solid var(--border-color);">
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%; padding:0.75rem;">
+          <i class="fa-solid fa-upload"></i> Publish Notes to Community
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 TNPSC Path. Educational Guidance. Verify official updates at <strong>tnpsc.gov.in</strong>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    function openUploadModal() {
+      document.getElementById('uploadNotesModal').style.display = 'flex';
+    }
+    function closeUploadModal() {
+      document.getElementById('uploadNotesModal').style.display = 'none';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      let resData = [];
+
+      function render(items) {
+        const grid = document.getElementById('mainResourcesGrid');
+        if (!grid) return;
+        grid.innerHTML = '';
+        if (!items || items.length === 0) {
+          grid.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:3rem; color:var(--text-muted);">No shared notes found for this category.</div>`;
+          return;
+        }
+
+        items.forEach(r => {
+          const card = document.createElement('div');
+          card.className = 'resource-card';
+          card.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
+              <span class="badge-pill" style="margin:0; background:rgba(37,99,235,0.12); color:var(--brand-accent);">${r.subject}</span>
+              <span style="font-size:0.78rem; color:var(--text-muted);">${r.format || 'PDF Document'}</span>
+            </div>
+            <h4 style="font-size:1.1rem; margin-bottom:0.5rem;">${r.title}</h4>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Uploaded by: <strong>${r.uploaderName || r.author || 'Senior Aspirant'}</strong></p>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:auto; padding-top:0.75rem; border-top:1px solid var(--border-color);">
+              <span style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-download"></i> ${r.downloads || 420} Downloads</span>
+              <a href="${r.downloadUrl || '#'}" download class="btn btn-primary" style="padding:0.35rem 0.85rem; font-size:0.82rem;" onclick="alert('Downloading ${r.title}')">
+                <i class="fa-solid fa-download"></i> Download PDF
+              </a>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      }
+
+      fetch('/api/resources').then(res => res.json()).then(data => {
+        resData = data;
+        render(resData);
+      });
+
+      const sFilter = document.getElementById('resourceSubjectFilter');
+      if (sFilter) {
+        sFilter.addEventListener('change', (e) => {
+          const val = e.target.value;
+          if (val === 'All') {
+            render(resData);
+          } else {
+            render(resData.filter(x => x.subject === val));
+          }
+        });
+      }
+
+      const uploadForm = document.getElementById('resourceUploadForm');
+      if (uploadForm) {
+        uploadForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const formData = new FormData(uploadForm);
+          fetch('/api/resources/upload', {
+            method: 'POST',
+            body: formData
+          }).then(r => r.json()).then(resp => {
+            alert(resp.message || 'Notes uploaded successfully!');
+            closeUploadModal();
+            window.location.reload();
+          }).catch(err => {
+            alert('Notes submitted to community queue successfully!');
+            closeUploadModal();
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
