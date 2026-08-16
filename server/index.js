@@ -5,14 +5,23 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 
 const apiRoutes = require('./routes/api');
+const seedDatabase = require('./dbSeed');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+let isMongoConnected = false;
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Attach MongoDB connection flag to requests
+app.use((req, res, next) => {
+  req.isMongoConnected = isMongoConnected;
+  next();
+});
 
 // Serve static assets
 app.use(express.static(path.join(__dirname, '../public')));
@@ -47,18 +56,23 @@ app.get('*', (req, res) => {
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/tnpsc_db';
 
 mongoose.connect(MONGODB_URI)
-  .then(() => console.log('Successfully connected to MongoDB database!'))
+  .then(async () => {
+    isMongoConnected = true;
+    console.log('✅ Successfully connected to Cloud MongoDB Atlas database!');
+    await seedDatabase();
+  })
   .catch((err) => {
-    console.warn('MongoDB Connection Warning:', err.message);
-    console.log('Operating cleanly with local persistent JSON storage fallback!');
+    isMongoConnected = false;
+    console.warn('⚠️ MongoDB Connection Warning:', err.message);
+    console.log('ℹ️ Operating cleanly with local persistent JSON storage fallback!');
   });
 
 app.listen(PORT, () => {
   console.log(`====================================================`);
-  console.log(` TNPSC Path Platform Running at: http://localhost:${PORT}`);
+  console.log(`🚀 TNPSC Path Platform Running at: http://localhost:${PORT}`);
   console.log(` Supporting All 8 TNPSC Exam Groups:`);
   console.log(` Group 1, Group 2 & 2A, Group 3, Group 4 & VAO,`);
   console.log(` Group 5A, Group 6, Group 7B & 8, Group 7A`);
-  console.log(` Status: Active & Ready`);
+  console.log(` Status: Active, Frontend <-> Backend <-> MongoDB Atlas Integrated!`);
   console.log(`====================================================`);
 });
