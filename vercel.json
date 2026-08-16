@@ -1,0 +1,95 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server/index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/css/(.*)",
+      "dest": "/public/css/$1"
+    },
+    {
+      "src": "/js/(.*)",
+      "dest": "/public/js/$1"
+    },
+    {
+      "src": "/images/(.*)",
+      "dest": "/public/images/$1"
+    },
+    {
+      "src": "/group1",
+      "dest": "/public/group1.html"
+    },
+    {
+      "src": "/group2",
+      "dest": "/public/group2.html"
+    },
+    {
+      "src": "/group3",
+      "dest": "/public/group3.html"
+    },
+    {
+      "src": "/group4",
+      "dest": "/public/group4.html"
+    },
+    {
+      "src": "/group5a",
+      "dest": "/public/group5a.html"
+    },
+    {
+      "src": "/group6",
+      "dest": "/public/group6.html"
+    },
+    {
+      "src": "/group7b-8",
+      "dest": "/public/group7b-8.html"
+    },
+    {
+      "src": "/group7a",
+      "dest": "/public/group7a.html"
+    },
+    {
+      "src": "/syllabus",
+      "dest": "/public/syllabus.html"
+    },
+    {
+      "src": "/previous-papers",
+      "dest": "/public/previous-papers.html"
+    },
+    {
+      "src": "/resources",
+      "dest": "/public/resources.html"
+    },
+    {
+      "src": "/study-plan",
+      "dest": "/public/study-plan.html"
+    },
+    {
+      "src": "/guidance",
+      "dest": "/public/guidance.html"
+    },
+    {
+      "src": "/faq",
+      "dest": "/public/faq.html"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/server/index.js"
+    },
+    {
+      "src": "/",
+      "dest": "/public/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/server/index.js"
+    }
+  ]
+}

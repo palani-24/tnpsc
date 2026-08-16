@@ -55,24 +55,30 @@ app.get('*', (req, res) => {
 // MongoDB Connection with fallback
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/tnpsc_db';
 
-mongoose.connect(MONGODB_URI)
-  .then(async () => {
-    isMongoConnected = true;
-    console.log('✅ Successfully connected to Cloud MongoDB Atlas database!');
-    await seedDatabase();
-  })
-  .catch((err) => {
-    isMongoConnected = false;
-    console.warn('⚠️ MongoDB Connection Warning:', err.message);
-    console.log('ℹ️ Operating cleanly with local persistent JSON storage fallback!');
-  });
+if (mongoose.connection.readyState === 0) {
+  mongoose.connect(MONGODB_URI)
+    .then(async () => {
+      isMongoConnected = true;
+      console.log('✅ Successfully connected to Cloud MongoDB Atlas database!');
+      await seedDatabase();
+    })
+    .catch((err) => {
+      isMongoConnected = false;
+      console.warn('⚠️ MongoDB Connection Warning:', err.message);
+      console.log('ℹ️ Operating cleanly with local persistent JSON storage fallback!');
+    });
+}
 
-app.listen(PORT, () => {
-  console.log(`====================================================`);
-  console.log(`🚀 TNPSC Path Platform Running at: http://localhost:${PORT}`);
-  console.log(` Supporting All 8 TNPSC Exam Groups:`);
-  console.log(` Group 1, Group 2 & 2A, Group 3, Group 4 & VAO,`);
-  console.log(` Group 5A, Group 6, Group 7B & 8, Group 7A`);
-  console.log(` Status: Active, Frontend <-> Backend <-> MongoDB Atlas Integrated!`);
-  console.log(`====================================================`);
-});
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`====================================================`);
+    console.log(`🚀 TNPSC Path Platform Running at: http://localhost:${PORT}`);
+    console.log(` Supporting All 8 TNPSC Exam Groups:`);
+    console.log(` Group 1, Group 2 & 2A, Group 3, Group 4 & VAO,`);
+    console.log(` Group 5A, Group 6, Group 7B & 8, Group 7A`);
+    console.log(` Status: Active, Frontend <-> Backend <-> MongoDB Atlas Integrated!`);
+    console.log(`====================================================`);
+  });
+}
+
+module.exports = app;
