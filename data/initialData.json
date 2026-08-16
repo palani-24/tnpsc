@@ -229,47 +229,131 @@
 
   "pyqs": [
     {
+      "id": "pyq-g1-2024",
+      "title": "TNPSC Group 1 Premier Service Prelims Official Question Paper (2024)",
+      "group": "Group 1",
+      "year": "2024",
+      "stage": "Prelims",
+      "subject": "General Studies (175 Qs) + Aptitude (25 Qs)",
+      "fileSize": "3.2 MB",
+      "fileName": "TNPSC_Group1_2024_Official_Prelims.pdf",
+      "filePath": "/uploads/TNPSC_Group1_2024_Official_Prelims.pdf",
+      "pptPath": "/uploads/TNPSC_All_Groups_Core_Concepts.pptx"
+    },
+    {
+      "id": "pyq-g1-2023",
+      "title": "TNPSC Group 1 Prelims Question Paper & Answer Key (2023)",
+      "group": "Group 1",
+      "year": "2023",
+      "stage": "Prelims",
+      "subject": "General Studies (175 Qs) + Aptitude (25 Qs)",
+      "fileSize": "2.2 MB",
+      "fileName": "TNPSC_Group1_2023_Prelims_Key.pdf",
+      "filePath": "/uploads/TNPSC_Group1_2023_Prelims_Key.pdf",
+      "pptPath": "/uploads/TNPSC_All_Groups_Core_Concepts.pptx"
+    },
+    {
+      "id": "pyq-g2-2024",
+      "title": "TNPSC Group 2 & 2A (CCS II) Prelims Question Paper & Key (2024)",
+      "group": "Group 2 & 2A",
+      "year": "2024",
+      "stage": "Prelims",
+      "subject": "Part A Tamil (100) + General Studies (75) + Aptitude (25)",
+      "fileSize": "2.8 MB",
+      "fileName": "TNPSC_Group2_2024_Prelims_Key.pdf",
+      "filePath": "/uploads/TNPSC_Group2_2024_Prelims_Key.pdf",
+      "pptPath": "/uploads/TNPSC_All_Groups_Core_Concepts.pptx"
+    },
+    {
+      "id": "pyq-g2-2022",
+      "title": "TNPSC Group 2 & 2A Prelims Master Question Paper (2022)",
+      "group": "Group 2 & 2A",
+      "year": "2022",
+      "stage": "Prelims",
+      "subject": "General Tamil (100 Qs) + General Studies & Aptitude (100 Qs)",
+      "fileSize": "1.8 MB",
+      "fileName": "TNPSC_Group2_2022_Prelims.pdf",
+      "filePath": "/uploads/TNPSC_Group2_2022_Prelims.pdf",
+      "pptPath": "/uploads/TNPSC_All_Groups_Core_Concepts.pptx"
+    },
+    {
+      "id": "pyq-g3-2023",
+      "title": "TNPSC Group 3 & 3A Junior Inspector Subordinate Question Paper (2023)",
+      "group": "Group 3 Subordinate",
+      "year": "2023",
+      "stage": "Single Written",
+      "subject": "General Tamil (100) + General Studies & Aptitude (100)",
+      "fileSize": "1.9 MB",
+      "fileName": "TNPSC_Group3_2023_Subordinate.pdf",
+      "filePath": "/uploads/TNPSC_Group3_2023_Subordinate.pdf",
+      "pptPath": "/uploads/TNPSC_All_Groups_Core_Concepts.pptx"
+    },
+    {
       "id": "pyq-g4-2024",
-      "title": "TNPSC Group 4 & VAO Official Prelims Exam Question Paper (Code 496)",
-      "group": "Group 4",
+      "title": "TNPSC Group 4 & VAO Official Prelims Question Paper (2024 Code 496)",
+      "group": "Group 4 & VAO",
       "year": "2024",
       "stage": "Single Written",
       "subject": "General Studies (75) + Aptitude (25) + General Tamil (100)",
       "fileSize": "3.1 MB",
       "fileName": "TNPSC_Group4_2024_Official_Paper.pdf",
       "filePath": "/uploads/TNPSC_Group4_2024_Official_Paper.pdf",
-      "pptPath": "/uploads/TNPSC_Group4_Code496_Concept_Slides.pptx"
+      "pptPath": "/uploads/TNPSC_All_Groups_Core_Concepts.pptx"
     },
     {
-      "id": "pyq-g1-2023",
-      "title": "TNPSC Group 1 Prelims Question Paper & Official Key",
-      "group": "Group 1",
-      "year": "2023",
-      "stage": "Prelims",
-      "subject": "General Studies (175) + Aptitude (25)",
-      "fileSize": "2.2 MB",
-      "fileName": "TNPSC_Group1_2023_Prelims.pdf",
-      "filePath": "/uploads/TNPSC_Group1_2023_Prelims.pdf",
-      "pptPath": "/uploads/TNPSC_Group1_Concept_Slides.pptx"
-    },
-    {
-      "id": "pyq-g2-2022",
-      "title": "TNPSC Group 2 & 2A Prelims Question Paper",
-      "group": "Group 2",
+      "id": "pyq-g4-2022",
+      "title": "TNPSC Group 4 & VAO Question Paper with Answer Key (2022)",
+      "group": "Group 4 & VAO",
       "year": "2022",
-      "stage": "Prelims",
-      "subject": "General Tamil (100) + General Studies (75) + Aptitude (25)",
+      "stage": "Single Written",
+      "subject": "General Studies (100) + General Tamil (100)",
+      "fileSize": "1.7 MB",
+      "fileName": "TNPSC_Group4_2022_Paper.pdf",
+      "filePath": "/uploads/TNPSC_Group4_2022_Paper.pdf",
+      "pptPath": "/uploads/TNPSC_All_Groups_Core_Concepts.pptx"
+    },
+    {
+      "id": "pyq-g4-2019",
+      "title": "TNPSC Group 4 & VAO Question Paper Archive (2019)",
+      "group": "Group 4 & VAO",
+      "year": "2019",
+      "stage": "Single Written",
+      "subject": "General Studies & General Tamil",
+      "fileSize": "1.5 MB",
+      "fileName": "TNPSC_Group4_2019_Paper.pdf",
+      "filePath": "/uploads/TNPSC_Group4_2019_Paper.pdf",
+      "pptPath": "/uploads/TNPSC_All_Groups_Core_Concepts.pptx"
+    },
+    {
+      "id": "pyq-g5a-2023",
+      "title": "TNPSC Group 5A Secretariat ASO Recruitment Question Paper (2023)",
+      "group": "Group 5A Secretariat",
+      "year": "2023",
+      "stage": "Written Test",
+      "subject": "Secretariat Office System & General Tamil",
       "fileSize": "1.8 MB",
-      "fileName": "TNPSC_Group2_2022_Prelims.pdf",
-      "filePath": "/uploads/TNPSC_Group2_2022_Prelims.pdf",
-      "pptPath": "/uploads/TNPSC_Group2_Concept_Slides.pptx"
+      "fileName": "TNPSC_Group5A_2023_Secretariat.pdf",
+      "filePath": "/uploads/TNPSC_Group5A_2023_Secretariat.pdf",
+      "pptPath": "/uploads/TNPSC_All_Groups_Core_Concepts.pptx"
+    },
+    {
+      "id": "pyq-g6-2023",
+      "title": "TNPSC Group 6 Forest Service (ACF) Written Question Paper (2023)",
+      "group": "Group 6 Forest",
+      "year": "2023",
+      "stage": "Written Test",
+      "subject": "General Studies & Forestry / Environmental Science",
+      "fileSize": "2.1 MB",
+      "fileName": "TNPSC_Group6_2023_Forest.pdf",
+      "filePath": "/uploads/TNPSC_Group6_2023_Forest.pdf",
+      "pptPath": "/uploads/TNPSC_All_Groups_Core_Concepts.pptx"
     },
     {
       "id": "pyq-g7b-2023",
-      "title": "TNPSC Group 7B Executive Officer Grade III Question Paper",
-      "group": "Group 7B & 8",
+      "title": "TNPSC Group 7B Executive Officer Grade III Question Paper (2023)",
+      "group": "Group 7B & 8 HR&CE",
       "year": "2023",
-      "stage": "Written",
+      "stage": "Written Test",
       "subject": "Paper I (GS & Tamil) + Paper II (சைவமும் வைணவமும்)",
       "fileSize": "1.8 MB",
       "fileName": "TNPSC_Group7B_2023_EO.pdf",
@@ -277,31 +361,67 @@
       "pptPath": "/uploads/TNPSC_All_Groups_Core_Concepts.pptx"
     },
     {
-      "id": "pyq-g4-2022",
-      "title": "TNPSC Group 4 & VAO Question Paper with Answer Key",
-      "group": "Group 4",
-      "year": "2022",
-      "stage": "Single Written",
-      "subject": "General Studies & General Tamil",
-      "fileSize": "1.7 MB",
-      "fileName": "TNPSC_Group4_2022_Paper.pdf",
-      "filePath": "/uploads/TNPSC_Group4_2022_Paper.pdf",
-      "pptPath": "/uploads/TNPSC_Group4_Code496_Concept_Slides.pptx"
+      "id": "pyq-g7a-2023",
+      "title": "TNPSC Group 7A Executive Officer Grade I Senior Paper (2023)",
+      "group": "Group 7A HR&CE Grade I",
+      "year": "2023",
+      "stage": "Written Test",
+      "subject": "Law, HR&CE Act 1959 & General Studies",
+      "fileSize": "2.0 MB",
+      "fileName": "TNPSC_Group7A_2023_EO_Grade1.pdf",
+      "filePath": "/uploads/TNPSC_Group7A_2023_EO_Grade1.pdf",
+      "pptPath": "/uploads/TNPSC_All_Groups_Core_Concepts.pptx"
     }
   ],
 
   "resources": [
     {
+      "id": "res-unit8-thirukkural",
+      "title": "Unit 8: Thirukkural 20 Adhigaram Simplified Notes (With Meanings)",
+      "uploadedBy": "Karthik R. (Group 1 Ranker)",
+      "group": "Group 1",
+      "type": "Notes",
+      "subject": "Unit 8 & 9",
+      "description": "Comprehensive explanation of 20 Thirukkural Adhigarams with Tamil & English commentaries for Unit 8.",
+      "downloads": 540,
+      "fileName": "TNPSC_Unit8_Thirukkural_Notes.pdf",
+      "filePath": "/uploads/TNPSC_Unit8_Thirukkural_Notes.pdf"
+    },
+    {
       "id": "res-g4-tamil-notes",
-      "title": "6th to 10th Samacheer Tamil - All 7 Units Handcrafted Notes",
+      "title": "6th to 10th Samacheer Tamil - All 7 Units Handcrafted Grammar Notes",
       "uploadedBy": "Selvam M. (Group 4 Topper)",
       "group": "Group 4",
       "type": "Notes",
-      "subject": "General Tamil (100 Qs)",
-      "description": "Comprehensive notes covering இலக்கணம், கலைச் சொற்கள், நிறுத்தற்குறிகள், and திருக்குறள் 20 அதிகாரங்கள்.",
-      "downloads": 482,
-      "fileName": "Group4_General_Tamil_Complete_Notes.pdf",
-      "filePath": "/uploads/Group4_General_Tamil_Complete_Notes.pdf"
+      "subject": "General Tamil",
+      "description": "Complete 7 units notes covering இலக்கணம், கலைச் சொற்கள், நிறுத்தற்குறிகள், and சான்றோர்கள்.",
+      "downloads": 890,
+      "fileName": "TNPSC_General_Tamil_7Units_Notes.pdf",
+      "filePath": "/uploads/TNPSC_General_Tamil_7Units_Notes.pdf"
+    },
+    {
+      "id": "res-unit9-schemes",
+      "title": "Unit 9: Tamil Nadu Welfare Schemes & Development Administration 2024",
+      "uploadedBy": "Priya S. (State Ranker)",
+      "group": "Group 2",
+      "type": "Notes",
+      "subject": "Unit 8 & 9",
+      "description": "Short revision notes on புதுமைப் பெண், தமிழ்ப் புதல்வன், காலை உணவுத் திட்டம், and கலைஞரின் மகளிர் உரிமைத் திட்டம்.",
+      "downloads": 620,
+      "fileName": "TNPSC_Unit9_TN_Schemes_Notes.pdf",
+      "filePath": "/uploads/TNPSC_Unit9_TN_Schemes_Notes.pdf"
+    },
+    {
+      "id": "res-aptitude-formulas",
+      "title": "Aptitude & Mental Ability Formula Sheet & Shortcut Tricks (25/25 Target)",
+      "uploadedBy": "Math Mentor Rajesh K.",
+      "group": "Group 4",
+      "type": "Notes",
+      "subject": "Aptitude",
+      "description": "Formula sheet covering HCF/LCM, Simplification, Ratio, Simple Interest, Compound Interest, and Reasoning shortcuts.",
+      "downloads": 975,
+      "fileName": "TNPSC_Aptitude_Formula_Sheet.pdf",
+      "filePath": "/uploads/TNPSC_Aptitude_Formula_Sheet.pdf"
     },
     {
       "id": "res-g4-code496-syllabus",
@@ -309,50 +429,25 @@
       "uploadedBy": "TNPSC Path Official",
       "group": "Group 4",
       "type": "Syllabus",
-      "subject": "Official Gazette Notification",
+      "subject": "General Studies",
       "description": "Complete 4-page official revised syllabus document published on 12.12.2024.",
-      "downloads": 890,
+      "downloads": 1240,
       "fileName": "TNPSC_Group4_2024_Official_Paper.pdf",
       "filePath": "/uploads/TNPSC_Group4_2024_Official_Paper.pdf"
-    },
-    {
-      "id": "res-unit8-notes",
-      "title": "Unit 8: Tamil Nadu History & Thirukkural Quick Revision Material",
-      "uploadedBy": "Anitha Rajan (Aspirant)",
-      "group": "Group 1",
-      "type": "Notes",
-      "subject": "Unit 8 TN History",
-      "description": "Short summary notes for Sangam Literature, Freedom fighters of TN, and Thirukkural universal values.",
-      "downloads": 350,
-      "fileName": "TNPSC_Unit8_Unit9_Master_Mindmap.pdf",
-      "filePath": "/uploads/TNPSC_Unit8_Unit9_Master_Mindmap.pdf"
-    },
-    {
-      "id": "res-hrce-saivam",
-      "title": "HR&CE Group 7B & 8 - சைவமும் வைணவமும் Key Formulas & Terms",
-      "uploadedBy": "Kalyanasundaram (Instructor)",
-      "group": "Group 7B & 8",
-      "type": "Notes",
-      "subject": "Hindu Religion",
-      "description": "Detailed notes on Saiva Siddhantam, Vaishnava Alwars, 12 Thirumurai, and Temple Law basics.",
-      "downloads": 210,
-      "fileName": "TNPSC_Group7B_2023_EO.pdf",
-      "filePath": "/uploads/TNPSC_Group7B_2023_EO.pdf"
     }
   ],
 
   "guidance": [
     {
-      "id": "g-g4-strategy",
-      "title": "How to Score 170+ Out of 200 in TNPSC Group 4 & VAO Exam (Code 496)",
-      "category": "Group 4 Strategy",
+      "id": "g-samacheer-guide",
+      "title": "How to Read Samacheer Kalvi School Books Efficiently for TNPSC",
+      "category": "Strategy Guide",
       "readTime": "6 min read",
-      "summary": "Mastering the 100-question General Tamil paper and 25 Aptitude questions guarantees a top merit rank in Group 4.",
+      "summary": "Step-by-step roadmap on which chapters to read and skip from 6th to 12th standard textbooks for Unit 1-10.",
       "points": [
-        "1. General Tamil (100 Qs): Spend 50% of your daily study time reading 6th to 10th Samacheer Tamil textbooks.",
-        "2. Aptitude & Mental Ability (25 Qs): Practice 25 questions daily from HCF/LCM, Ratio, Simplification, and Interest.",
-        "3. Unit 8 & Unit 9 in GS (75 Qs): Focus on Tamil Nadu History, Freedom Movement, and Development Schemes.",
-        "4. Weekly Mock Tests: Attempt 3 full-length 200-question OMR mock tests before exam day."
+        "1. Prioritize 6th-10th Social Science & 11th-12th History/Political Science.",
+        "2. Focus heavily on 6th-10th Tamil textbooks for Part C 100 Questions.",
+        "3. Highlight Book Back Questions & 'Do You Know' (உங்களுக்கு தெரியுமா) boxes."
       ]
     },
     {
@@ -380,6 +475,7 @@
       ]
     }
   ],
+
 
   "faqs": [
     {
