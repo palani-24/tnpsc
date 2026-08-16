@@ -72,28 +72,63 @@
     </div>
   </div>
 
-  <!-- Resources Grid Section -->
+  <!-- Content Container with Tabs -->
   <div class="container" style="margin-bottom:4rem;">
     
-    <!-- Filter & Category Bar -->
-    <div class="filter-bar" style="margin-bottom:2rem;">
-      <div class="filter-group">
-        <label for="resourceSubjectFilter" style="font-weight:600;">Subject Category:</label>
-        <select id="resourceSubjectFilter" class="filter-select">
-          <option value="All">All Subjects</option>
-          <option value="General Studies">General Studies</option>
-          <option value="Unit 8 & 9">Unit 8 & 9 (TN History & Dev Admin)</option>
-          <option value="General Tamil">General Tamil (பொதுத் தமிழ்)</option>
-          <option value="Aptitude">Aptitude & Mental Ability</option>
-          <option value="HR&CE">HR&CE Agama & Saivam</option>
-        </select>
+    <!-- Feature Section Tabs -->
+    <div class="tab-nav" style="margin-bottom: 2rem;">
+      <button class="tab-btn active" onclick="switchResourceTab(event, 'notesTab')"><i class="fa-solid fa-folder-open"></i> Community Shared Notes</button>
+      <button class="tab-btn" onclick="switchResourceTab(event, 'caTab')"><i class="fa-solid fa-newspaper"></i> Daily Current Affairs (நடப்பு நிகழ்வுகள்)</button>
+      <button class="tab-btn" onclick="switchResourceTab(event, 'bookTab')"><i class="fa-solid fa-book-bookmark"></i> Samacheer Book Finder (பாடப்புத்தக வழிகாட்டி)</button>
+    </div>
+
+    <!-- Tab 1: Community Notes -->
+    <div id="notesTab" class="tab-content active">
+      <div class="filter-bar" style="margin-bottom:2rem;">
+        <div class="filter-group">
+          <label for="resourceSubjectFilter" style="font-weight:600;">Subject Category:</label>
+          <select id="resourceSubjectFilter" class="filter-select">
+            <option value="All">All Subjects</option>
+            <option value="General Studies">General Studies</option>
+            <option value="Unit 8 & 9">Unit 8 & 9 (TN History & Dev Admin)</option>
+            <option value="General Tamil">General Tamil (பொதுத் தமிழ்)</option>
+            <option value="Aptitude">Aptitude & Mental Ability</option>
+            <option value="HR&CE">HR&CE Agama & Saivam</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="resources-grid" id="mainResourcesGrid">
+        <!-- Injected via JS -->
       </div>
     </div>
 
-    <div class="resources-grid" id="mainResourcesGrid">
-      <!-- Injected via JS -->
+    <!-- Tab 2: Daily Current Affairs -->
+    <div id="caTab" class="tab-content">
+      <div style="margin-bottom: 1.5rem;">
+        <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem;"><i class="fa-solid fa-newspaper" style="color:var(--brand-accent);"></i> TNPSC Current Affairs Digest</h3>
+        <p style="color:var(--text-muted); font-size: 0.92rem;">Daily Tamil Nadu & National Current Affairs curated specifically for TNPSC Unit 8, Unit 9, and General Studies papers.</p>
+      </div>
+
+      <div id="currentAffairsGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem;">
+        <!-- Loaded via JS from /api/current-affairs -->
+      </div>
     </div>
+
+    <!-- Tab 3: Samacheer Book Mapping Finder -->
+    <div id="bookTab" class="tab-content">
+      <div style="margin-bottom: 1.5rem;">
+        <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem;"><i class="fa-solid fa-book-open-reader" style="color:var(--brand-secondary);"></i> Samacheer Kalvi School Book Mapping Explorer</h3>
+        <p style="color:var(--text-muted); font-size: 0.92rem;">Find exactly which 6th to 12th standard school textbooks to read for every TNPSC Unit 1 to 10 syllabus topic.</p>
+      </div>
+
+      <div id="bookMappingContainer">
+        <!-- Loaded via JS from /api/book-mappings -->
+      </div>
+    </div>
+
   </div>
+
 
   <!-- Upload Modal -->
   <div class="modal-overlay" id="uploadNotesModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center;">
@@ -154,6 +189,18 @@
       document.getElementById('uploadNotesModal').style.display = 'none';
     }
 
+    function switchResourceTab(event, tabId) {
+      if (event) event.preventDefault();
+      const parentNav = event.target.closest('.tab-nav');
+      if (parentNav) {
+        parentNav.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.closest('.tab-btn').classList.add('active');
+      }
+      document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+      const target = document.getElementById(tabId);
+      if (target) target.classList.add('active');
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       let resData = [];
 
@@ -187,9 +234,55 @@
         });
       }
 
+      // Load Resources
       fetch('/api/resources').then(res => res.json()).then(data => {
         resData = data;
         render(resData);
+      });
+
+      // Load Current Affairs
+      fetch('/api/current-affairs').then(res => res.json()).then(items => {
+        const caContainer = document.getElementById('currentAffairsGrid');
+        if (!caContainer) return;
+        if (!items || !items.length) {
+          caContainer.innerHTML = `<p>No current affairs articles found.</p>`;
+          return;
+        }
+        caContainer.innerHTML = items.map(ca => `
+          <div style="background:var(--bg-surface); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:1.25rem; display:flex; flex-direction:column;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+              <span class="badge-pill" style="margin:0; font-size:0.75rem; background:rgba(16,185,129,0.12); color:#10b981;">${ca.category}</span>
+              <span style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-regular fa-calendar"></i> ${ca.date}</span>
+            </div>
+            <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:0.5rem;">${ca.title}</h4>
+            <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:1rem; flex:1;">${ca.summary}</p>
+            <div style="display:flex; gap:0.4rem; flex-wrap:wrap;">
+              ${(ca.tags || []).map(t => `<span style="font-size:0.75rem; background:var(--bg-subtle); padding:0.2rem 0.5rem; border-radius:4px;">#${t}</span>`).join('')}
+            </div>
+          </div>
+        `).join('');
+      });
+
+      // Load Samacheer Book Mappings
+      fetch('/api/book-mappings').then(res => res.json()).then(mappings => {
+        const container = document.getElementById('bookMappingContainer');
+        if (!container) return;
+        if (!mappings || !mappings.length) {
+          container.innerHTML = `<p>No book mappings found.</p>`;
+          return;
+        }
+        container.innerHTML = mappings.map(m => `
+          <div style="background:var(--bg-surface); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:1.5rem; margin-bottom:1rem;">
+            <h4 style="font-size:1.1rem; color:var(--brand-accent); font-weight:700; margin-bottom:0.35rem;">${m.unit}</h4>
+            <p style="font-size:0.9rem; font-weight:600; color:var(--text-main); margin-bottom:0.75rem;">Syllabus Focus Topics: ${m.topics}</p>
+            <div style="background:var(--bg-subtle); padding:0.85rem; border-radius:var(--radius-sm);">
+              <h5 style="font-size:0.85rem; font-weight:700; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.4rem;">Samacheer Kalvi Recommended Textbooks:</h5>
+              <ul style="padding-left:1.25rem; font-size:0.88rem; line-height:1.6;">
+                ${m.books.map(b => `<li style="margin-bottom:0.25rem;">📚 ${b}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+        `).join('');
       });
 
       const sFilter = document.getElementById('resourceSubjectFilter');
@@ -224,5 +317,6 @@
       }
     });
   </script>
+
 </body>
 </html>

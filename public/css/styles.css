@@ -784,3 +784,277 @@ a {
   .hero-title { font-size: 1.75rem; }
   .cards-grid { grid-template-columns: 1fr; }
 }
+
+/* ==========================================================================
+   NEW INTERACTIVE FEATURES & DESIGN SYSTEM EXTENSIONS
+   ========================================================================== */
+
+/* 1. Cadre Filter Tabs on Homepage */
+.cadre-filter-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.cadre-filter-btn {
+  background: var(--bg-surface);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.cadre-filter-btn:hover {
+  border-color: var(--brand-accent);
+  color: var(--brand-accent);
+}
+
+.cadre-filter-btn.active {
+  background: var(--brand-accent);
+  color: #ffffff;
+  border-color: var(--brand-accent);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
+}
+
+/* 2. Interactive TNPSC Eligibility & PSTM Checker Widget */
+.eligibility-widget-card {
+  background: linear-gradient(135deg, var(--bg-surface), var(--bg-subtle));
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin: 3rem 0;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.eligibility-widget-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--brand-accent), var(--brand-secondary), var(--brand-gold));
+}
+
+.eligibility-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.eligibility-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.eligibility-form-group label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.eligibility-form-group input,
+.eligibility-form-group select {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--bg-surface);
+  color: var(--text-main);
+  font-size: 0.95rem;
+  font-weight: 600;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.eligibility-form-group input:focus,
+.eligibility-form-group select:focus {
+  border-color: var(--brand-accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.eligibility-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.eligible-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.eligible-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--brand-accent);
+}
+
+.eligible-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.eligible-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+}
+.badge-emerald { background: rgba(16, 185, 129, 0.15); color: #10b981; }
+.badge-purple { background: rgba(168, 85, 247, 0.15); color: #a855f7; }
+.badge-blue { background: rgba(59, 130, 246, 0.15); color: #3b82f6; }
+.badge-gold { background: rgba(245, 158, 11, 0.15); color: #f59e0b; }
+
+.eligible-link-btn {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--brand-accent);
+}
+
+.eligible-card h5 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.eligible-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.eligible-pstm-pill {
+  background: var(--bg-subtle);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* 3. Syllabus Tracker Progress Ring & Bar */
+.syllabus-tracker-banner {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #10b981, #3b82f6);
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.topic-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.85rem;
+  border-bottom: 1px dashed var(--border-color);
+  transition: background var(--transition-fast);
+}
+
+.topic-item:hover {
+  background: var(--bg-subtle);
+}
+
+.topic-item.completed {
+  opacity: 0.7;
+}
+
+.topic-item.completed label {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.syllabus-topic-cb {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--brand-secondary);
+}
+
+/* 4. Mobile Bottom App Navigation Bar */
+.mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 62px;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.mobile-bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  gap: 0.2rem;
+  flex: 1;
+  height: 100%;
+}
+
+.mobile-bottom-nav-item i {
+  font-size: 1.15rem;
+}
+
+.mobile-bottom-nav-item.active,
+.mobile-bottom-nav-item:hover {
+  color: var(--brand-accent);
+}
+
+@media (max-width: 768px) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+  body {
+    padding-bottom: 65px;
+  }
+}
+

@@ -89,6 +89,17 @@ router.get('/guidance', (req, res) => {
   res.json(localData.guidance || []);
 });
 
+// GET /api/current-affairs
+router.get('/current-affairs', (req, res) => {
+  res.json(localData.currentAffairs || []);
+});
+
+// GET /api/book-mappings
+router.get('/book-mappings', (req, res) => {
+  res.json(localData.samacheerBookMappings || []);
+});
+
+
 // GET /api/resources (Search & Filter)
 router.get('/resources', async (req, res) => {
   const { group, subject, search, type, sort } = req.query;

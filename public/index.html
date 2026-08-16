@@ -148,36 +148,79 @@
         <p class="section-desc">Choose from the 8 official TNPSC group cadres below to view dedicated syllabus, exam pattern, job roles, and preparation roadmaps.</p>
       </div>
 
+      <!-- Interactive Cadre Filter Tabs -->
+      <div class="cadre-filter-wrapper">
+        <button class="cadre-filter-btn active" data-filter="all"><i class="fa-solid fa-layer-group"></i> All 8 Cadres</button>
+        <button class="cadre-filter-btn" data-filter="sslc"><i class="fa-solid fa-graduation-cap"></i> 10th SSLC Level</button>
+        <button class="cadre-filter-btn" data-filter="hsc"><i class="fa-solid fa-school"></i> 12th HSC Level</button>
+        <button class="cadre-filter-btn" data-filter="degree"><i class="fa-solid fa-user-graduate"></i> Degree Level</button>
+        <button class="cadre-filter-btn" data-filter="special"><i class="fa-solid fa-star"></i> Specialized / HR&CE</button>
+      </div>
+
       <div class="cards-grid" id="groupsCardsGrid">
         <!-- Dynamically rendered via JS -->
       </div>
     </div>
   </section>
 
-  <!-- Beginner Eligibility Checker Widget -->
+  <!-- Advanced Interactive Eligibility & PSTM Matcher Widget -->
   <section class="container" style="margin-bottom: 3rem;">
-    <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
-      <div class="section-title-wrap" style="text-align: left; margin-bottom: 1.5rem;">
-        <h2 class="section-title" style="font-size: 1.6rem;"><i class="fa-solid fa-user-check" style="color:var(--brand-primary);"></i> Beginner Eligibility & Group Matcher</h2>
-        <p class="section-desc" style="font-size: 0.95rem;">Not sure which exam group you can write? Select your educational qualification below to find your eligible exam cadres instantly.</p>
+    <div class="eligibility-widget-card">
+      <div class="section-title-wrap" style="text-align: left; margin-bottom: 1rem;">
+        <h2 class="section-title" style="font-size: 1.6rem;"><i class="fa-solid fa-id-card-clip" style="color:var(--brand-accent);"></i> Interactive Eligibility & PSTM Quota Checker</h2>
+        <p class="section-desc" style="font-size: 0.95rem;">Enter your age, highest qualification, reservation category, and Tamil Medium (PSTM) status to calculate eligible TNPSC exam cadres and age relaxation instantly.</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; align-items: end;">
-        <div>
-          <label style="font-weight: 600; display: block; margin-bottom: 0.5rem; font-size: 0.9rem;">Education Qualification:</label>
-          <select id="eligibilityQualSelect" style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-primary); color: var(--text-primary);">
-            <option value="sslc">SSLC / 10th Standard (10th Pass)</option>
-            <option value="hsc">HSC / Higher Secondary (12th Pass / Diploma)</option>
-            <option value="degree" selected>Any Degree (B.A., B.Sc., B.Com, B.E., B.Tech)</option>
-            <option value="law">Degree in Law (B.L. / LL.B.)</option>
-            <option value="agama">Diploma in Saiva / Vaishnava Agama</option>
-          </select>
+      <form id="eligibilityForm">
+        <div class="eligibility-form-grid">
+          <div class="eligibility-form-group">
+            <label for="eligibilityAge">Your Age</label>
+            <input type="number" id="eligibilityAge" value="21" min="18" max="58" required>
+          </div>
+
+          <div class="eligibility-form-group">
+            <label for="eligibilityQual">Highest Qualification</label>
+            <select id="eligibilityQual" required>
+              <option value="sslc">10th Standard (SSLC)</option>
+              <option value="12th">12th Standard / Diploma</option>
+              <option value="degree" selected>Bachelor's Degree (Any Discipline)</option>
+              <option value="pg">Master's / Professional Degree</option>
+            </select>
+          </div>
+
+          <div class="eligibility-form-group">
+            <label for="eligibilityCategory">Reservation Category</label>
+            <select id="eligibilityCategory" required>
+              <option value="BC">BC / BCM (Backward Class)</option>
+              <option value="MBC">MBC / DNC (Most Backward Class)</option>
+              <option value="SC">SC / SCA (Scheduled Caste)</option>
+              <option value="ST">ST (Scheduled Tribe)</option>
+              <option value="OC">OC / General Quota</option>
+            </select>
+          </div>
+
+          <div class="eligibility-form-group">
+            <label for="eligibilityPstm">PSTM Quota (Tamil Medium)</label>
+            <select id="eligibilityPstm" required>
+              <option value="yes">Yes (Studied in Tamil Medium)</option>
+              <option value="no">No (English Medium / Other)</option>
+            </select>
+          </div>
         </div>
 
-        <div>
-          <label style="font-weight: 600; display: block; margin-bottom: 0.5rem; font-size: 0.9rem;">Your Age:</label>
-          <input type="number" id="eligibilityAgeInput" value="21" min="18" max="58" style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-primary); color: var(--text-primary);">
+        <div style="text-align: right; margin-top: 1rem;">
+          <button type="submit" class="btn btn-primary" style="padding: 0.75rem 1.8rem;">
+            <i class="fa-solid fa-calculator"></i> Calculate Eligible Cadres
+          </button>
         </div>
+      </form>
+
+      <div id="eligibilityResults" style="margin-top: 1.5rem;">
+        <!-- Live dynamic results rendered via eligibility.js -->
+      </div>
+    </div>
+  </section>
+
 
         <div>
           <button class="btn btn-primary" id="checkEligibilityBtn" style="width: 100%; height: 48px;">
@@ -338,7 +381,18 @@
     </div>
   </footer>
 
-  <!-- Main JavaScript File -->
+  <!-- Mobile Bottom Navigation Bar -->
+  <nav class="mobile-bottom-nav">
+    <a href="/" class="mobile-bottom-nav-item active"><i class="fa-solid fa-house"></i><span>Home</span></a>
+    <a href="/#groupsSection" class="mobile-bottom-nav-item"><i class="fa-solid fa-layer-group"></i><span>Groups</span></a>
+    <a href="/syllabus" class="mobile-bottom-nav-item"><i class="fa-solid fa-book-open"></i><span>Syllabus</span></a>
+    <a href="/resources" class="mobile-bottom-nav-item"><i class="fa-solid fa-file-pdf"></i><span>Notes</span></a>
+    <a href="/faq" class="mobile-bottom-nav-item"><i class="fa-solid fa-circle-question"></i><span>FAQ</span></a>
+  </nav>
+
+  <!-- JavaScript Files -->
+  <script src="js/eligibility.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
+

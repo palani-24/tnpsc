@@ -71,6 +71,23 @@
   <!-- Content Container -->
   <div class="container" style="margin-bottom:4rem;">
 
+    <!-- Interactive Syllabus Progress Tracker Banner -->
+    <div class="syllabus-tracker-banner">
+      <div style="flex:1;">
+        <h3 style="font-size:1.3rem; margin-bottom:0.25rem;"><i class="fa-solid fa-list-check" style="color:var(--brand-secondary);"></i> Your TNPSC Syllabus Preparation Progress</h3>
+        <p style="font-size:0.88rem; color:#cbd5e1;" id="syllabusCompletedCount">0 / 10 Units Completed</p>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="syllabusProgressBar"></div>
+        </div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:2rem; font-weight:800; color:var(--brand-secondary);" id="syllabusProgressPercent">0%</div>
+        <button class="btn btn-outline" style="font-size:0.75rem; padding:0.3rem 0.6rem; color:#ffffff; border-color:rgba(255,255,255,0.3);" onclick="localStorage.removeItem('tnpsc_syllabus_progress'); window.initSyllabusTracker();">
+          <i class="fa-solid fa-rotate-left"></i> Reset
+        </button>
+      </div>
+    </div>
+
     <!-- Group Selector Tabs -->
     <div class="tab-nav">
       <button class="tab-btn active" onclick="switchSyllabusTab('gs')"><i class="fa-solid fa-book"></i> General Studies (Units I - X)</button>
@@ -90,6 +107,7 @@
         <!-- Accordion items rendered dynamically -->
       </div>
     </div>
+
 
     <!-- Group 4 Code 496 Tab -->
     <div id="syllabusTabG4" class="tab-content">
@@ -227,14 +245,17 @@
           item.className = 'accordion-item';
           item.innerHTML = `
             <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
-              <div>
-                <span>Unit ${u.unit}</span>
-                <strong>${u.name}</strong>
+              <div style="display:flex; align-items:center; gap:0.75rem;">
+                <input type="checkbox" class="syllabus-topic-cb" data-topic-id="unit-${u.unit}" onclick="event.stopPropagation();">
+                <div>
+                  <span>Unit ${u.unit}</span>
+                  <strong>${u.name}</strong>
+                </div>
               </div>
               <i class="fa-solid fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-body">
-              <p style="margin-bottom:0.75rem;">${u.topics}</p>
+              <p style="margin-bottom:0.75rem; line-height:1.6;">${u.topics}</p>
               <div style="background:var(--bg-subtle); padding:0.75rem; border-radius:var(--radius-sm); font-size:0.85rem; color:var(--brand-accent); font-weight:600;">
                 <i class="fa-solid fa-book-open"></i> Samacheer Book Reference: ${u.bookReferences || '6th - 12th Standard Social Science & Science Textbooks'}
               </div>
@@ -242,7 +263,12 @@
           `;
           container.appendChild(item);
         });
+
+        if (window.initSyllabusTracker) {
+          window.initSyllabusTracker();
+        }
       });
+
 
       const searchInput = document.getElementById('syllabusSearchInput');
       if (searchInput) {

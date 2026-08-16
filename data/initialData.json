@@ -398,5 +398,89 @@
       "q": "Can final year college students apply for Group 1 and Group 2?",
       "a": "Candidates must possess the required degree qualification on or before the date of official notification release to be eligible to apply."
     }
+  ],
+
+  "currentAffairs": [
+    {
+      "id": "ca-1",
+      "date": "2024-08-15",
+      "title": "Kalaignar Magalir Urimai Thittam Expansion & Impact",
+      "category": "Tamil Nadu Schemes (Unit 9)",
+      "summary": "Tamil Nadu Government's flagship monthly financial assistance scheme reaching over 1.15 crore women heads of households.",
+      "tags": ["Unit 9", "TN Govt Schemes", "Social Welfare"]
+    },
+    {
+      "id": "ca-2",
+      "date": "2024-08-10",
+      "title": "Keezhadi Museum Phase 2 & Archaeological Findings",
+      "category": "TN History & Culture (Unit 8)",
+      "summary": "Artifacts dating back to 6th Century BCE Sangam Era unearthed near Sivagangai, establishing urban civilization in ancient Tamilakam.",
+      "tags": ["Unit 8", "Sangam Era", "Archaeology"]
+    },
+    {
+      "id": "ca-3",
+      "date": "2024-08-05",
+      "title": "Tamil Nadu Green Energy & Solar Policy 2024",
+      "category": "Environment & Economy (Unit 9)",
+      "summary": "State targets 20,000 MW solar power generation capacity by 2030, establishing mega solar parks in Ramanathapuram & Virudhunagar.",
+      "tags": ["Unit 9", "Energy", "Economy"]
+    },
+    {
+      "id": "ca-4",
+      "date": "2024-07-28",
+      "title": "Chief Minister's Breakfast Scheme (Kaalai Unavu Thittam)",
+      "category": "Education & Health (Unit 9)",
+      "summary": "Expanded across all government primary schools in Tamil Nadu, benefiting 17+ lakh children to improve attendance and nutrition.",
+      "tags": ["Unit 9", "Education", "Welfare"]
+    },
+    {
+      "id": "ca-5",
+      "date": "2024-07-20",
+      "title": "Isro GSLV-F14 NVS-02 Satellite Launch",
+      "category": "Science & Tech (Unit 1)",
+      "summary": "Next-generation NavIC navigation satellite successfully placed into orbit from SDSC SHAR, Sriharikota.",
+      "tags": ["Unit 1", "Science & Tech", "ISRO"]
+    }
+  ],
+
+  "samacheerBookMappings": [
+    {
+      "unit": "Unit 8: History, Culture, Heritage & Socio-Political Movements in TN",
+      "topics": "Sangam Age, Thirukkural, Freedom Struggle in TN",
+      "books": [
+        "6th Std Social Science Term 3 - Society and Culture in Ancient Tamzhagam",
+        "9th Std Social Science - Early Tamil Society and Culture",
+        "10th Std Social Science Vol 2 - Freedom Struggle in Tamil Nadu & Social Transformation",
+        "11th Std Ethics (அறவியலும் இந்தியப் பண்பாடும்) - Chapters 1, 3 & 5",
+        "11th & 12th Advanced Tamil / General Tamil Textbooks"
+      ]
+    },
+    {
+      "unit": "Unit 9: Development Administration in Tamil Nadu",
+      "topics": "Human Development Indicators, e-Governance, Economic Growth & Welfare Schemes",
+      "books": [
+        "11th Std Economics - Chapter 11 (Tamil Nadu Economy)",
+        "11th Std Political Science - Chapter 15 (Tamil Nadu Political Thought)",
+        "10th Std Social Science Vol 2 - Chapter 10 (Social Transformation in TN)"
+      ]
+    },
+    {
+      "unit": "Unit 5: Indian Polity",
+      "topics": "Constitution of India, Preamble, Fundamental Rights, Parliament, Panchayat Raj",
+      "books": [
+        "6th Std Social Science Term 2 - Understanding Diversity & Equality",
+        "8th Std Social Science - How the State Government Works",
+        "10th Std Social Science Vol 1 - Indian Constitution & State Government",
+        "11th & 12th Std Political Science - Full Textbooks"
+      ]
+    },
+    {
+      "unit": "Unit 10: Aptitude & Mental Ability",
+      "topics": "Simplification, Percentage, HCF & LCM, Ratio, Simple Interest & Compound Interest",
+      "books": [
+        "6th to 10th Std Mathematics Textbooks (All Term Workbooks & Example Problems)"
+      ]
+    }
   ]
 }
+

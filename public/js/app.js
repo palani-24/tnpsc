@@ -241,4 +241,78 @@ document.addEventListener('DOMContentLoaded', () => {
       feedback.innerHTML = `<span style="color:#ef4444; font-weight:700;">❌ Incorrect.</span> ${explanation}`;
     }
   };
+
+  // 10. Homepage Cadre Filter Tabs
+  const cadreFilterBtns = document.querySelectorAll('.cadre-filter-btn');
+  if (cadreFilterBtns.length > 0) {
+    cadreFilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        cadreFilterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+        const cards = document.querySelectorAll('#groupsCardsGrid .group-card');
+        cards.forEach(card => {
+          const level = card.getAttribute('data-cadre-level') || 'all';
+          if (filter === 'all' || level.includes(filter)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  // 11. Syllabus Progress Tracker Logic
+  window.initSyllabusTracker = function() {
+    const checkboxes = document.querySelectorAll('.syllabus-topic-cb');
+    const progressBar = document.getElementById('syllabusProgressBar');
+    const progressPercentText = document.getElementById('syllabusProgressPercent');
+    const completedCountText = document.getElementById('syllabusCompletedCount');
+
+    if (!checkboxes.length) return;
+
+    let saved = JSON.parse(localStorage.getItem('tnpsc_syllabus_progress') || '{}');
+
+    function updateStats() {
+      let checkedCount = 0;
+      checkboxes.forEach(cb => {
+        const id = cb.getAttribute('data-topic-id');
+        if (saved[id]) {
+          cb.checked = true;
+          cb.closest('.topic-item')?.classList.add('completed');
+          checkedCount++;
+        } else {
+          cb.checked = false;
+          cb.closest('.topic-item')?.classList.remove('completed');
+        }
+      });
+
+      const total = checkboxes.length;
+      const percent = total > 0 ? Math.round((checkedCount / total) * 100) : 0;
+
+      if (progressBar) progressBar.style.width = percent + '%';
+      if (progressPercentText) progressPercentText.textContent = percent + '%';
+      if (completedCountText) completedCountText.textContent = `${checkedCount} / ${total} Topics Completed`;
+    }
+
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        const id = cb.getAttribute('data-topic-id');
+        saved[id] = cb.checked;
+        localStorage.setItem('tnpsc_syllabus_progress', JSON.stringify(saved));
+        updateStats();
+      });
+    });
+
+    updateStats();
+  };
+
+  // Run syllabus tracker if checkboxes exist
+  setTimeout(() => {
+    if (document.querySelectorAll('.syllabus-topic-cb').length > 0) {
+      window.initSyllabusTracker();
+    }
+  }, 300);
 });
+
